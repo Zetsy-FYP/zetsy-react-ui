@@ -1,0 +1,45 @@
+.navbarHome__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 3vw;
+  background: #f4f5f0;
+
+  .menuHighlights {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex: 1 1 0;
+
+    div:nth-child(2) {
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      padding: 0 3rem;
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    p {
+      font-family: "Playfair Display", serif;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  .menu__container {
+    flex: 1 1 0;
+    text-align: center;
+    
+    .menu__logo h1 {
+      font-family: "Bodoni Moda", serif;
+      font-size: 4em;
+      font-weight: 700;
+    }
+  }
+}

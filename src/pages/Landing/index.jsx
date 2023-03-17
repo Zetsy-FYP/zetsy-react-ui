@@ -75,10 +75,8 @@ export default function Landing() {
             <span>Design</span>
             <h2>The Power of Customization</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
-              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
-              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
-              omnis. Tenetur, eos doloribus?
+              Make it yours: Zetsy empowers your marketplace with limitless
+              customization options.
             </p>
           </div>
           <div className="service">
@@ -90,10 +88,7 @@ export default function Landing() {
             <span>Community</span>
             <h2>Unleashed Collaboration</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
-              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
-              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
-              omnis. Tenetur, eos doloribus?
+              Unlock your potential: Unleash the power of collaboration with us.
             </p>
           </div>
           <div className="service">
@@ -105,10 +100,8 @@ export default function Landing() {
             <span>Finance</span>
             <h2>Optimized Economics</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
-              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
-              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
-              omnis. Tenetur, eos doloribus?
+              Elevate your financial potential: Experience the benefits of
+              optimized economics.
             </p>
           </div>
           <div className="service">
@@ -120,10 +113,7 @@ export default function Landing() {
             <span>Analytics</span>
             <h2>Insights that Drive Actions</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
-              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
-              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
-              omnis. Tenetur, eos doloribus?
+              See beyond, act ahead: Gain insights that drive actions with us.
             </p>
           </div>
           <div className="service">
@@ -135,10 +125,8 @@ export default function Landing() {
             <span>Integration</span>
             <h2>Seamless Connections</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
-              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
-              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
-              omnis. Tenetur, eos doloribus?
+              Connecting you to what matters: Experience seamless connections
+              with us.
             </p>
           </div>
           <div className="service">
@@ -150,10 +138,8 @@ export default function Landing() {
             <span>Streamlined</span>
             <h2>Efficiency at your Fingertips</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
-              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
-              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
-              omnis. Tenetur, eos doloribus?
+              Maximizing productivity, minimizing effort: Efficiency at your
+              fingertips with us.
             </p>
           </div>
         </div>

@@ -77,7 +77,7 @@
     .menu__logo h1 {
       font-family: "Bodoni Moda", serif;
       font-weight: 700;
-      position: absolute;
+      position: fixed;
       left: 50%;
       transform: translate(-50%, -50%);
       behavior: smooth;

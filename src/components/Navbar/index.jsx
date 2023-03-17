@@ -19,7 +19,7 @@ export default function NavbarHome() {
 
   const initialLogoStyle = {
     fontSize: `${8 - (scrollYLogoTransform * 2.5) / 60}rem`,
-    top: `${scrollYLogoMargin >= 140 ? scrollYLogoMargin + 28 : 160}px`,
+    top: `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px`,
   };
 
   return (

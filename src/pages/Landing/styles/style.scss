@@ -1,4 +1,11 @@
 .landing__container {
-  min-height: 100vh;
-  margin-top: 200px;
+  margin-top: 250px;
+
+  .landing__banner {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    // padding: 0 20px;
+    object-position: center;
+  }
 }

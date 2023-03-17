@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import "./styles/style.css";
+import landingBanner from "../../assets/landing.mp4";
 
 export default function Landing() {
   return (
@@ -9,7 +10,7 @@ export default function Landing() {
       <Helmet>
         <title>Zetsy | Your all-in-one solution for online retail.</title>
       </Helmet>
-      Landing
+      <video className="landing__banner" src={landingBanner} autoPlay loop muted/>
     </div>
   );
 }

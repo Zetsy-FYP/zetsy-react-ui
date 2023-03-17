@@ -1,9 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 
 import "./styles/style.css";
 import landingBanner from "../../assets/landing.mp4";
+import { Button } from "@mui/material";
 
 export default function Landing() {
   return (
@@ -67,11 +69,16 @@ export default function Landing() {
 
         <div className="services__container">
           <div className="service">
-            <img
-              src="https://images.unsplash.com/photo-1541506618330-7c369fc759b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
-              alt=""
-              loading="lazy"
-            />
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="image__container"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1541506618330-7c369fc759b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </motion.div>
             <span>Design</span>
             <h2>The Power of Customization</h2>
             <p>
@@ -80,11 +87,16 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1495&q=80"
-              alt=""
-              loading="lazy"
-            />
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="image__container"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1495&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </motion.div>
             <span>Community</span>
             <h2>Unleashed Collaboration</h2>
             <p>
@@ -92,11 +104,16 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://images.unsplash.com/photo-1593672715438-d88a70629abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-              alt=""
-              loading="lazy"
-            />
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="image__container"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1593672715438-d88a70629abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </motion.div>
             <span>Finance</span>
             <h2>Optimized Economics</h2>
             <p>
@@ -105,11 +122,16 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt=""
-              loading="lazy"
-            />
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="image__container"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </motion.div>
             <span>Analytics</span>
             <h2>Insights that Drive Actions</h2>
             <p>
@@ -117,11 +139,16 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://images.unsplash.com/photo-1603015269169-225cb700e29a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-              alt=""
-              loading="lazy"
-            />
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="image__container"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1603015269169-225cb700e29a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </motion.div>
             <span>Integration</span>
             <h2>Seamless Connections</h2>
             <p>
@@ -130,11 +157,16 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt=""
-              loading="lazy"
-            />
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="image__container"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </motion.div>
             <span>Streamlined</span>
             <h2>Efficiency at your Fingertips</h2>
             <p>
@@ -143,6 +175,59 @@ export default function Landing() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="landing__projects">
+        <h1>Zetsy's Projects</h1>
+        <p>
+          Transforming ideas into reality - Our portfolio showcases the power of<br/>
+          innovation and creativity at Zetsy.
+        </p>
+        <Marquee speed={35} pauseOnHover={true}>
+          <ul>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+          </ul>
+        </Marquee>
+        <Marquee speed={35} pauseOnHover={true} direction="right">
+          <ul>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+          </ul>
+        </Marquee>
+        <Marquee speed={35} pauseOnHover={true}>
+          <ul>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+            <li>Ditto</li>
+            <li>ThriftMyOutfit</li>
+          </ul>
+        </Marquee>
+
+        <Button>Browse All Products</Button>
       </div>
     </div>
   );

@@ -73,6 +73,7 @@
   padding: 0 20px;
   border-left: 1px solid #000;
   min-height: 600px;
+  cursor: pointer;
 }
 .landing__container .landing__services .services__container .service:first-child {
   border-left: none;
@@ -101,4 +102,66 @@
   font-size: 16px;
   line-height: 1.5;
   font-family: "Lato", sans-serif;
+}
+.landing__container .landing__projects {
+  margin-bottom: 80px;
+}
+.landing__container .landing__projects .overlay {
+  display: none;
+}
+.landing__container .landing__projects h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.landing__container .landing__projects p {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+}
+.landing__container .landing__projects ul {
+  display: flex;
+  gap: 50px;
+  margin: 10px 0;
+}
+.landing__container .landing__projects ul li {
+  font-size: 4.5em;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent; /* hide the text fill */
+  -webkit-text-stroke-width: 1px; /* set the stroke width */
+  -webkit-text-stroke-color: #000; /* set the stroke color */
+  text-fill-color: transparent; /* hide the text fill (for non-webkit browsers) */
+  text-stroke-width: 1px; /* set the stroke width (for non-webkit browsers) */
+  text-stroke-color: #000; /* set the stroke color (for non-webkit browsers) */
+  font-family: "Lato", serif;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.landing__container .landing__projects ul li:hover {
+  -webkit-text-fill-color: #000; /* hide the text fill */
+  -webkit-text-stroke-width: 1px; /* set the stroke width */
+  -webkit-text-stroke-color: #000; /* set the stroke color */
+  text-fill-color: transparent; /* hide the text fill (for non-webkit browsers) */
+  text-stroke-width: 1px; /* set the stroke width (for non-webkit browsers) */
+  text-stroke-color: #000; /* set the stroke color (for non-webkit browsers) */
+}
+.landing__container .landing__projects .MuiButton-root {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-family: "Playfair Display", sans-serif;
+  color: #000;
+  font-size: 20px;
+  margin-top: 30px;
+  padding: 10px 30px;
+}
+.landing__container .landing__projects .MuiButton-root:hover {
+  background: #000;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

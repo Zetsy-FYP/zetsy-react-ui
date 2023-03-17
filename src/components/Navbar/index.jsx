@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 
 import "./styles/style.css";
@@ -20,7 +21,23 @@ export default function NavbarHome() {
         </div>
       </div>
       <div className="menu__container">
-        
+        <div className="menuItems">
+          <Button>
+            <i className="ri-menu-line"></i>
+          </Button>
+          <Button>
+            <i className="ri-search-2-line"></i>
+          </Button>
+
+          <input type="text" />
+
+          <Button>
+            <i className="ri-map-pin-line"></i>
+          </Button>
+          <Button>
+            <i className="ri-shopping-cart-line"></i>
+          </Button>
+        </div>
         <div className="menu__logo">
           <h1>Zetsy.</h1>
         </div>

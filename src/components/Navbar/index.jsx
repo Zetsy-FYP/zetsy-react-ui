@@ -1,9 +1,27 @@
 import { Button } from "@mui/material";
 import React from "react";
+import { motion, useTransform } from "framer-motion";
 
 import "./styles/style.css";
 
 export default function NavbarHome() {
+  const [scrollYLogoTransform, setScrollYLogoTransform] = React.useState(0);
+  const [scrollYLogoMargin, setScrollYLogoMargin] = React.useState(0);
+
+  console.log(scrollYLogoTransform);
+
+  window.addEventListener("scroll", () => {
+    setScrollYLogoTransform(
+      window.scrollY >= 148.88 ? 148.88 : window.scrollY
+    );
+    setScrollYLogoMargin(window.scrollY);
+  });
+
+  const initialLogoStyle = {
+    fontSize: `${8 - (scrollYLogoTransform * 2.5) / 60}rem`,
+    top: `${scrollYLogoMargin >= 140 ? scrollYLogoMargin + 28 : 160}px`,
+  };
+
   return (
     <div className="navbarHome__container">
       <div className="menuHighlights left">
@@ -22,7 +40,7 @@ export default function NavbarHome() {
       </div>
       <div className="menu__container">
         <div className="menuItems">
-          <Button>
+          <Button className="borderRight">
             <i className="ri-menu-line"></i>
           </Button>
           <Button>
@@ -31,7 +49,7 @@ export default function NavbarHome() {
 
           <input type="text" />
 
-          <Button>
+          <Button className="borderRight">
             <i className="ri-map-pin-line"></i>
           </Button>
           <Button>
@@ -39,7 +57,7 @@ export default function NavbarHome() {
           </Button>
         </div>
         <div className="menu__logo">
-          <h1>Zetsy.</h1>
+          <motion.h1 style={initialLogoStyle}>Zetsy.</motion.h1>
         </div>
       </div>
       <div className="menuHighlights right">

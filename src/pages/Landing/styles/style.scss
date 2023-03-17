@@ -8,4 +8,39 @@
     // padding: 0 20px;
     object-position: center;
   }
+
+  .landing__introduction {
+    margin: 50px auto;
+    max-width: 50vw;
+    text-align: center;
+
+    h1 {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+      margin: 0;
+      font-size: 32px;
+
+      span {
+        font-family: "Bodoni Moda", serif;
+        font-weight: 700;
+      }
+    }
+
+    .star {
+      margin: 20px 0 0 0;
+      font-size: 50px;
+    }
+
+    .description {
+      font-size: 20px;
+      line-height: 1.5;
+      font-family: "Lato", sans-serif;
+
+      span {
+        font-family: "Bodoni Moda", serif;
+        font-weight: 600;
+      }
+    }
+  }
 }

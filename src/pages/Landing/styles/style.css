@@ -10,7 +10,7 @@
      object-position: center;
 }
 .landing__container .landing__introduction {
-  margin: 50px auto;
+  margin: 80px auto;
   max-width: 50vw;
   text-align: center;
 }
@@ -37,4 +37,68 @@
 .landing__container .landing__introduction .description span {
   font-family: "Bodoni Moda", serif;
   font-weight: 600;
+}
+.landing__container .landing__introduction .joinZetsy {
+  color: #000;
+  font-size: 25px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.landing__container .landing__introduction .joinZetsy p {
+  text-decoration: underline;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+.landing__container .landing__services {
+  margin: 0 1.5vw;
+}
+.landing__container .landing__services h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  margin: 0;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.landing__container .landing__services .services__container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+.landing__container .landing__services .services__container .service {
+  flex: 1 1 0;
+  padding: 0 20px;
+  border-left: 1px solid #000;
+  min-height: 685px;
+}
+.landing__container .landing__services .services__container .service:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+.landing__container .landing__services .services__container .service:last-child {
+  padding-right: 0;
+}
+.landing__container .landing__services .services__container .service img {
+  width: 100%;
+}
+.landing__container .landing__services .services__container .service span {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+}
+.landing__container .landing__services .services__container .service h2 {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.landing__container .landing__services .services__container .service p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
 }/*# sourceMappingURL=style.css.map */

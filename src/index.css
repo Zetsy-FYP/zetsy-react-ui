@@ -22,4 +22,5 @@
 
 body {
   background: #f4f5f0;
+  overflow-x: hidden;
 }

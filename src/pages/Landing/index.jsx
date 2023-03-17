@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 
 import "./styles/style.css";
 import landingBanner from "../../assets/landing.mp4";
@@ -10,6 +11,7 @@ export default function Landing() {
       <Helmet>
         <title>Zetsy | Your all-in-one solution for online retail.</title>
       </Helmet>
+
       <video
         className="landing__banner"
         src={landingBanner}
@@ -29,11 +31,11 @@ export default function Landing() {
 
         <p className="description">
           Welcome to <span>Zetsy</span> - the ultimate destination for online
-          presence! <span>Zetsy</span> is a platform designed to bring
-          together the best of ecommerce and business, with a focus on
-          personalized experiences and unique products. Our marketplace
-          connects buyers and sellers, making it easy to find the perfect
-          product and for retailers to reach a wider audience. <br />
+          presence! <span>Zetsy</span> is a platform designed to bring together
+          the best of ecommerce and business, with a focus on personalized
+          experiences and unique products. Our marketplace connects buyers and
+          sellers, making it easy to find the perfect product and for retailers
+          to reach a wider audience. <br />
           <br />
         </p>
 
@@ -50,6 +52,111 @@ export default function Landing() {
           Each product tells a story on <span>Zetsy</span>.<br />
           This is chapter one, <b>Retails</b>.
         </p>
+
+        <motion.div
+          initial={{ gap: "10px" }}
+          whileHover={{ gap: "25px" }}
+          className="joinZetsy"
+        >
+          <p>let's zetsy started!</p> <i className="ri-arrow-right-line"></i>
+        </motion.div>
+      </div>
+
+      <div className="landing__services">
+        <h1>Zetsy's Inventory</h1>
+
+        <div className="services__container">
+          <div className="service">
+            <img
+              src="https://images.unsplash.com/photo-1541506618330-7c369fc759b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+              alt=""
+              loading="lazy"
+            />
+            <span>Design</span>
+            <h2>The Power of Customization</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
+              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
+              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
+              omnis. Tenetur, eos doloribus?
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1495&q=80"
+              alt=""
+              loading="lazy"
+            />
+            <span>Community</span>
+            <h2>Unleashed Collaboration</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
+              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
+              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
+              omnis. Tenetur, eos doloribus?
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://images.unsplash.com/photo-1593672715438-d88a70629abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              loading="lazy"
+            />
+            <span>Finance</span>
+            <h2>Optimized Economics</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
+              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
+              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
+              omnis. Tenetur, eos doloribus?
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt=""
+              loading="lazy"
+            />
+            <span>Analytics</span>
+            <h2>Insights that Drive Actions</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
+              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
+              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
+              omnis. Tenetur, eos doloribus?
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://images.unsplash.com/photo-1603015269169-225cb700e29a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+              alt=""
+              loading="lazy"
+            />
+            <span>Integration</span>
+            <h2>Seamless Connections</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
+              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
+              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
+              omnis. Tenetur, eos doloribus?
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt=""
+              loading="lazy"
+            />
+            <span>Streamlined</span>
+            <h2>Efficiency at your Fingertips</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste,
+              magni cum modi sit, eum adipisci quibusdam consequuntur laborum
+              doloribus nesciunt commodi laudantium fugiat accusamus ipsum et
+              omnis. Tenetur, eos doloribus?
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

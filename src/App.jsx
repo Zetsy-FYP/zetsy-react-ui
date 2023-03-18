@@ -1,4 +1,6 @@
 import React from "react";
+
+import Footer from "./components/Footer";
 import NavbarHome from "./components/Navbar";
 import Routers from "./configs/Routers";
 
@@ -11,6 +13,7 @@ export default function App() {
       {/* @note if authenticated, navbar else no navbar */}
       {!isAuthenticated ? <NavbarHome /> : null}
       <Routers />
+      <Footer />
     </>
   );
 }

@@ -2,10 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
+import { Button } from "@mui/material";
 
 import "./styles/style.css";
 import landingBanner from "../../assets/landing.mp4";
-import { Button } from "@mui/material";
+import Spring from "../../assets/spring.png";
+import SpringR from "../../assets/spring-r.png";
 
 export default function Landing() {
   return (
@@ -180,7 +182,8 @@ export default function Landing() {
       <div className="landing__projects">
         <h1>Zetsy's Projects</h1>
         <p>
-          Transforming ideas into reality - Our portfolio showcases the power of<br/>
+          Transforming ideas into reality - Our portfolio showcases the power of
+          <br />
           innovation and creativity at Zetsy.
         </p>
         <Marquee speed={35} pauseOnHover={true}>
@@ -227,7 +230,76 @@ export default function Landing() {
           </ul>
         </Marquee>
 
-        <Button>Browse All Products</Button>
+        <Button>Browse All Projects</Button>
+      </div>
+
+      <div className="landing__zetsyForWho">
+        <span className="title">start, scale, and save</span>
+
+        <div className="forWho__container">
+          <div className="firstLevelChild">
+            <h1>
+              Management and Online Presence is timely and expensive – we'll
+              help with both.
+            </h1>
+            <img
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+          <div className="firstLevelChild">
+            <div className="flex">
+              <div>
+                <h1>Individual</h1>
+                <p>
+                  Customisable, and clear options you can manage yourself.
+                  Streamline your back office.
+                </p>
+                <img
+                  src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1412&q=80"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h1>Business</h1>
+                <p>
+                  Scale effortlessly, with domestic and international benefits.
+                  Sell to every buyer, everywhere.
+                </p>
+                <img
+                  src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="freelancers">
+              <h1>Startups</h1>
+              <p>An easy gateway to cover your team. Your store, your way.</p>
+              <img
+                src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="landing__subscribeBusiness">
+        <div className="title">
+          <img src={Spring} loading="lazy" alt="" />
+          <div>
+            <h1>Grow your business with us.</h1>
+            <p>
+            <p>If you are looking to sell products locally or internationally, we provide you with all the necessary tools.</p>
+            </p>
+            <Button>Register Your Business</Button>
+            </div>
+          <img src={SpringR} loading="lazy" alt="" />
+        </div>
       </div>
     </div>
   );

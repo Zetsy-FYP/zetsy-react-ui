@@ -135,7 +135,7 @@ export default function NavbarHome() {
                 <p>Dark Mode</p>
               </div>
               <div className="firstChild">
-                <m.i whileHover={{rotate: 90}} className="ri-settings-4-line"></m.i>
+                <m.i whileHover={{rotate: 60}} className="ri-settings-4-line"></m.i>
                 <p>Settings</p>
               </div>
             </div>

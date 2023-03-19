@@ -1,0 +1,22 @@
+.themes__container {
+  margin: 0 3vw;
+  margin-top: 250px;
+  max-width: 100vw;
+  margin-bottom: 80px;
+}
+@media (max-width: 576px) {
+  .themes__container {
+    margin-top: 150px;
+  }
+}
+.themes__container .themesItems {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+@media (max-width: 576px) {
+  .themes__container .themesItems {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */

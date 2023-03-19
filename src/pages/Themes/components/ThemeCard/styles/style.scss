@@ -1,0 +1,47 @@
+.themeCard__container {
+  width: 22vw;
+
+  @media (max-width: 576px){
+    width: 90vw;
+    margin-bottom: 30px;
+  }
+
+  .img__container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 100%;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+
+    h2{
+        font-family: "Playfair Display", serif;
+    }
+
+    .category {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      div{
+        border: 1px solid #000;
+        padding: 5px;
+      }
+    }
+  }
+}

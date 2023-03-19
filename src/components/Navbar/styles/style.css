@@ -99,6 +99,7 @@
   color: #000;
   font-weight: 600;
   font-family: "Playfair Display", serif;
+  width: 100%;
 }
 .navbarHome__container .menu__container .menuItems__container p {
   cursor: pointer;

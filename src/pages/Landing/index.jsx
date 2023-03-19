@@ -332,7 +332,7 @@ export default function Landing() {
           </div>
           <div className="team">
             <img src="https://ik.imagekit.io/jckalabs/Zetsy/327268592_853679075707120_7819938780839728950_n.jpg?updatedAt=1679246534521" loading="lazy" alt="" />
-            <span>Sudeep Mishra</span>
+            <span>Sudeep Mishra (SoDeep)</span>
             <span className="post">Platform Wizard</span>
             <div className="socialMedias">
               <div>
@@ -348,7 +348,7 @@ export default function Landing() {
           </div>
           <div className="team">
             <img src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878" loading="lazy" alt="" />
-            <span>Suraj Gaire</span>
+            <span>Suraj Gaire (Gaire)</span>
             <span className="post">Themes Wizard</span>
             <div className="socialMedias">
               <div>
@@ -364,7 +364,7 @@ export default function Landing() {
           </div>
           <div className="team">
             <img src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-46-12.png?updatedAt=1679248895986" loading="lazy" alt="" />
-            <span>Jessica Singh Shrestha</span>
+            <span>Jessica Singh Shrestha (Jess)</span>
             <span className="post">Finance Manager</span>
             <div className="socialMedias">
               <div>
@@ -380,7 +380,7 @@ export default function Landing() {
           </div>
           <div className="team">
             <img src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576" loading="lazy" alt="" />
-            <span>Nirdesh Acharya Dixit</span>
+            <span>Nirdesh Acharya Dixit (Neil)</span>
             <span className="post">Growth Hacker</span>
             <div className="socialMedias">
               <div>

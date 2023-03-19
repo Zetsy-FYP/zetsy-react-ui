@@ -260,7 +260,7 @@
 }
 @media (max-width: 576px) {
   .landing__container .landing__zetsyForWho .forWho__container {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 .landing__container .landing__zetsyForWho .forWho__container h1 {
@@ -293,10 +293,20 @@
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child {
   flex: 2;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child {
+    flex: 1;
+  }
+}
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex {
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid #000;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex {
+    flex-wrap: wrap;
+  }
 }
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex div {
   flex: 1 1 0;

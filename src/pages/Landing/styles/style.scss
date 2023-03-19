@@ -33,7 +33,7 @@
       font-family: "Playfair Display", serif;
       font-weight: 500;
       margin: 0;
-      font-size: 32px;
+      font-size: 35px;
 
       span {
         font-family: "Bodoni Moda", serif;
@@ -435,16 +435,16 @@
     border-bottom: 1px solid #000;
     text-align: center;
 
-    @media (max-width: 576px){
+    @media (max-width: 576px) {
       padding: 40px 3vw;
     }
 
-    h1{
+    h1 {
       font-family: "Playfair Display", serif;
       font-size: 2.5em;
     }
 
-    p{
+    p {
       margin: 40px 0;
       margin-top: 10px;
       font-family: "Playfair Display", serif;
@@ -459,7 +459,7 @@
       flex-wrap: wrap;
       justify-content: center;
 
-      @media (max-width: 576px){
+      @media (max-width: 576px) {
         flex-direction: column;
         align-items: center;
       }
@@ -472,15 +472,16 @@
           height: 400px;
           object-fit: cover;
           object-position: center;
+          cursor: pointer;
         }
 
-        span{
+        span {
           font-family: "Playfair Display", serif;
           font-weight: 600;
           font-size: 22px;
           margin: 10px 0 5px 0;
 
-          &.post{
+          &.post {
             margin: 0;
             margin-bottom: 10px;
             font-family: "Oswald", serif;
@@ -489,13 +490,13 @@
           }
         }
 
-        .socialMedias{
+        .socialMedias {
           display: flex;
           gap: 10px;
           align-items: center;
           justify-content: center;
 
-          i{
+          i {
             font-size: 22px;
             cursor: pointer;
           }

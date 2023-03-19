@@ -35,7 +35,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 500;
   margin: 0;
-  font-size: 32px;
+  font-size: 35px;
 }
 .landing__container .landing__introduction h1 span {
   font-family: "Bodoni Moda", serif;
@@ -452,6 +452,7 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  cursor: pointer;
 }
 .landing__container .landing__meetTheTeam .teamItems .team span {
   font-family: "Playfair Display", serif;

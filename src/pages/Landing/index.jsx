@@ -17,7 +17,6 @@ export default function Landing() {
       </Helmet>
 
       <video
-        data-aos="fade-up"
         className="landing__banner"
         src={landingBanner}
         autoPlay
@@ -26,7 +25,7 @@ export default function Landing() {
       />
 
       <div className="landing__introduction">
-        <h1 data-aos="fade-up">
+        <h1>
           "Unleash the full potential of your online presence with{" "}
           <span>Zetsy</span>. Let us be the guiding star that leads your
           business to success in the digital realm."
@@ -34,7 +33,7 @@ export default function Landing() {
 
         <p className="star">*</p>
 
-        <p data-aos="fade-up" className="description">
+        <p className="description">
           Welcome to <span>Zetsy</span> - the ultimate destination for online
           presence! <span>Zetsy</span> is a platform designed to bring together
           the best of ecommerce and business, with a focus on personalized
@@ -44,7 +43,7 @@ export default function Landing() {
           <br />
         </p>
 
-        <p data-aos="fade-up" className="description">
+        <p className="description">
           At <span>Zetsy</span>, we believe that every item has a story to tell,
           and we're committed to helping our customers discover the narrative
           behind each piece. So why wait? Come explore our platform and discover
@@ -53,13 +52,12 @@ export default function Landing() {
           <br />
         </p>
 
-        <p data-aos="fade-up" className="description">
+        <p className="description">
           Each product tells a story on <span>Zetsy</span>.<br />
           This is chapter one, <b>Retails</b>.
         </p>
 
         <motion.div
-        data-aos="fade-up"
           initial={{ gap: "10px" }}
           whileHover={{ gap: "25px" }}
           className="joinZetsy"
@@ -72,7 +70,7 @@ export default function Landing() {
         <h1 data-aos="fade-right">Zetsy's Inventory</h1>
 
         <div className="services__container">
-          <div data-aos="fade-up" className="service">
+          <div className="service">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
@@ -90,7 +88,7 @@ export default function Landing() {
               customization options.
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="50" className="service">
+          <div className="service">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
@@ -107,7 +105,7 @@ export default function Landing() {
               Unlock your potential: Unleash the power of collaboration with us.
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" className="service">
+          <div className="service">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
@@ -125,7 +123,7 @@ export default function Landing() {
               optimized economics.
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="150" className="service">
+          <div className="service">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
@@ -142,7 +140,7 @@ export default function Landing() {
               See beyond, act ahead: Gain insights that drive actions with us.
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="200" className="service">
+          <div className="service">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
@@ -160,7 +158,7 @@ export default function Landing() {
               with us.
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="150" className="service">
+          <div className="service">
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
@@ -178,17 +176,15 @@ export default function Landing() {
               fingertips with us.
             </p>
           </div>
-        </div>
-      </div>
 
       <div className="landing__projects">
-        <h1 data-aos="fade-up">Zetsy's Projects</h1>
-        <p data-aos="fade-up">
+        <h1>Zetsy's Projects</h1>
+        <p>
           Transforming ideas into reality - Our portfolio showcases the power of
           <br />
-          innovation and creativity at Zetsy.
+          innova
         </p>
-        <Marquee data-aos="fade-left" speed={35} pauseOnHover={true}>
+        <Marquee speed={35} pauseOnHover={true}>
           <ul>
             <li>ThriftMyOutfit</li>
             <li>Ditto</li>
@@ -202,7 +198,12 @@ export default function Landing() {
             <li>Ditto</li>
           </ul>
         </Marquee>
-        <Marquee data-aos="fade-right" speed={35} pauseOnHover={true} direction="right">
+        <Marquee
+          data-aos="fade-right"
+          speed={35}
+          pauseOnHover={true}
+          direction="right"
+        >
           <ul>
             <li>ThriftMyOutfit</li>
             <li>Ditto</li>
@@ -216,7 +217,7 @@ export default function Landing() {
             <li>Ditto</li>
           </ul>
         </Marquee>
-        <Marquee data-aos="fade-left" speed={35} pauseOnHover={true}>
+        <Marquee speed={35} pauseOnHover={true}>
           <ul>
             <li>ThriftMyOutfit</li>
             <li>Ditto</li>
@@ -232,14 +233,12 @@ export default function Landing() {
           </ul>
         </Marquee>
 
-        <Button data-aos="fade-up">Browse All Projects</Button>
+        <Button>Browse All Projects</Button>
       </div>
 
       <div className="landing__zetsyForWho">
         <span className="title">start, scale, and save</span>
-
-        <div className="forWho__container">
-          <div data-aos="fade-right" className="firstLevelChild">
+ data-aos="fade-right" className="firstLevelChild">
             <h1>
               Management and Online Presence is timely and expensive – we'll
               help with both.
@@ -252,7 +251,7 @@ export default function Landing() {
           </div>
           <div className="firstLevelChild">
             <div className="flex">
-              <div data-aos="fade-up">
+              <div>
                 <h1>Individual</h1>
                 <p>
                   Customisable, and clear options you can manage yourself.
@@ -264,7 +263,7 @@ export default function Landing() {
                   loading="lazy"
                 />
               </div>
-              <div data-aos="fade-up">
+              <div>
                 <h1>Business</h1>
                 <p>
                   Scale effortlessly, with domestic and international benefits.
@@ -277,7 +276,7 @@ export default function Landing() {
                 />
               </div>
             </div>
-            <div data-aos="fade-left" className="freelancers">
+            <div className="freelancers">
               <h1>Startups</h1>
               <p>An easy gateway to cover your team. Your store, your way.</p>
               <img
@@ -292,24 +291,24 @@ export default function Landing() {
 
       <div className="landing__subscribeBusiness">
         <div className="title">
-          <img data-aos="fade-right" src={Spring} loading="lazy" alt="" />
+          <img src={Spring} loading="lazy" alt="" />
           <div>
-            <h1 data-aos-delay="200" data-aos="fade-up">Grow your business with us.</h1>
-            <p data-aos-delay="200" data-aos="fade-up">
+            <h1>Grow your business with us.</h1>
+            <p>
               <span>
                 If you are looking to sell products locally or internationally,
                 we provide you with all the necessary tools.
               </span>
             </p>
-            <Button data-aos-delay="200" data-aos="fade-up">Register Your Business</Button>
+            <Button>Register Your Business</Button>
           </div>
-          <img data-aos="fade-left" src={SpringR} loading="lazy" alt="" />
+          <img src={SpringR} loading="lazy" alt="" />
         </div>
       </div>
 
       <div className="landing__meetTheTeam">
-        <h1 data-aos="fade-up">Meet The Team</h1>
-        <p data-aos="fade-up">
+        <h1>Meet The Team</h1>
+        <p>
           Discover the faces and stories behind our brand's success.
           <br /> Meet the Team and gain a deeper understanding of our shared
           mission,
@@ -318,7 +317,7 @@ export default function Landing() {
         </p>
 
         <div className="teamItems">
-          <div data-aos="fade-up" className="team">
+          <div className="team">
             <img
               src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-05-03.png?updatedAt=1679246413143"
               loading="lazy"
@@ -338,7 +337,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" className="team">
+          <div className="team">
             <img
               src="https://ik.imagekit.io/jckalabs/Zetsy/327268592_853679075707120_7819938780839728950_n.jpg?updatedAt=1679246534521"
               loading="lazy"
@@ -358,7 +357,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="200" className="team">
+          <div className="team">
             <img
               src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878"
               loading="lazy"
@@ -378,7 +377,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="300" className="team">
+          <div className="team">
             <img
               src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-46-12.png?updatedAt=1679248895986"
               loading="lazy"
@@ -398,7 +397,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="400" className="team">
+          <div className="team">
             <img
               src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576"
               loading="lazy"

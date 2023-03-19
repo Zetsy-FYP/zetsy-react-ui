@@ -294,10 +294,10 @@ export default function Landing() {
           <div>
             <h1>Grow your business with us.</h1>
             <p>
-              <p>
+              <span>
                 If you are looking to sell products locally or internationally,
                 we provide you with all the necessary tools.
-              </p>
+              </span>
             </p>
             <Button>Register Your Business</Button>
           </div>
@@ -350,6 +350,22 @@ export default function Landing() {
             <img src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878" loading="lazy" alt="" />
             <span>Suraj Gaire</span>
             <span className="post">Themes Wizard</span>
+            <div className="socialMedias">
+              <div>
+                <i className="ri-facebook-line"></i>
+              </div>
+              <div>
+                <i className="ri-twitter-line"></i>
+              </div>
+              <div>
+                <i className="ri-linkedin-line"></i>
+              </div>
+            </div>
+          </div>
+          <div className="team">
+            <img src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-46-12.png?updatedAt=1679248895986" loading="lazy" alt="" />
+            <span>Jessica Singh Shrestha</span>
+            <span className="post">Finance Manager</span>
             <div className="socialMedias">
               <div>
                 <i className="ri-facebook-line"></i>

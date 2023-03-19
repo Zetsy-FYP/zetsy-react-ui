@@ -28,7 +28,7 @@ export default function NavbarHome() {
     setScrollYLogoTransform(window.scrollY >= 148.88 ? 148.88 : window.scrollY);
     setScrollYLogoMargin(window.scrollY);
   });
-  console.log(window.innerWidth);
+
   const initialLogoStyle = {
     fontSize:
       window.innerWidth > 576

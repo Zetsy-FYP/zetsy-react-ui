@@ -2,6 +2,11 @@
   margin-top: 250px;
   max-width: 100vw;
 }
+@media (max-width: 576px) {
+  .landing__container {
+    margin-top: 220px;
+  }
+}
 .landing__container .landing__banner {
   width: 100vw;
   height: 60vh;
@@ -102,6 +107,7 @@
   .landing__container .landing__services .services__container {
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 40px;
   }
 }
 .landing__container .landing__services .services__container .service {
@@ -197,6 +203,11 @@
   text-transform: uppercase;
   white-space: nowrap;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__projects ul li {
+    font-size: 2.5em;
+  }
+}
 .landing__container .landing__projects ul li:hover {
   -webkit-text-fill-color: #000; /* hide the text fill */
   -webkit-text-stroke-width: 1px; /* set the stroke width */
@@ -223,6 +234,13 @@
 .landing__container .landing__zetsyForWho {
   margin: 80px 7vw;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho {
+    margin: 40px 3vw;
+    padding-top: 10px;
+    margin-top: 20px;
+  }
+}
 .landing__container .landing__zetsyForWho .title {
   font-size: 1rem;
   text-transform: uppercase;
@@ -239,6 +257,11 @@
 .landing__container .landing__zetsyForWho .forWho__container {
   display: flex;
   align-items: flex-start;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho .forWho__container {
+    flex-wrap: wrap;
+  }
 }
 .landing__container .landing__zetsyForWho .forWho__container h1 {
   font-family: "Playfair Display", serif;

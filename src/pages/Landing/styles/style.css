@@ -444,10 +444,9 @@
 .landing__container .landing__meetTheTeam .teamItems .team {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
 }
 .landing__container .landing__meetTheTeam .teamItems .team img {
-  width: 100%;
+  width: 300px;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;

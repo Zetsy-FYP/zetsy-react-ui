@@ -147,6 +147,7 @@
   border: 1px solid #000;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.3s all ease-in-out;
 }
 .navbarHome__container .menu__container .menuItems__container .utilities .firstChild .darkMode__container .circle:hover {
   background: #000;

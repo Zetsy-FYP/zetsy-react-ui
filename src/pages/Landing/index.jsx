@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import { Button } from "@mui/material";
 
@@ -27,8 +27,8 @@ export default function Landing() {
       <div className="landing__introduction">
         <h1>
           "Unleash the full potential of your online presence with{" "}
-          <span>Zetsy</span>. Let us be the guiding star that leads your
-          business to success in the digital realm."
+          <span>Zetsy</span>. Let<br/> us be the guiding star that leads your
+          business to success in the<br/> digital realm."
         </h1>
 
         <p className="star">*</p>
@@ -57,13 +57,13 @@ export default function Landing() {
           This is chapter one, <b>Retails</b>.
         </p>
 
-        <motion.div
+        <m.div
           initial={{ gap: "10px" }}
           whileHover={{ gap: "25px" }}
           className="joinZetsy"
         >
           <p>let's zetsy started!</p> <i className="ri-arrow-right-line"></i>
-        </motion.div>
+        </m.div>
       </div>
 
       <div className="landing__services">
@@ -71,7 +71,7 @@ export default function Landing() {
 
         <div className="services__container">
           <div className="service">
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
             >
@@ -80,7 +80,7 @@ export default function Landing() {
                 alt=""
                 loading="lazy"
               />
-            </motion.div>
+            </m.div>
             <span>Design</span>
             <h2>The Power of Customization</h2>
             <p>
@@ -89,7 +89,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
             >
@@ -98,7 +98,7 @@ export default function Landing() {
                 alt=""
                 loading="lazy"
               />
-            </motion.div>
+            </m.div>
             <span>Community</span>
             <h2>Unleashed Collaboration</h2>
             <p>
@@ -106,7 +106,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
             >
@@ -115,7 +115,7 @@ export default function Landing() {
                 alt=""
                 loading="lazy"
               />
-            </motion.div>
+            </m.div>
             <span>Finance</span>
             <h2>Optimized Economics</h2>
             <p>
@@ -124,7 +124,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
             >
@@ -133,7 +133,7 @@ export default function Landing() {
                 alt=""
                 loading="lazy"
               />
-            </motion.div>
+            </m.div>
             <span>Analytics</span>
             <h2>Insights that Drive Actions</h2>
             <p>
@@ -141,7 +141,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
             >
@@ -150,7 +150,7 @@ export default function Landing() {
                 alt=""
                 loading="lazy"
               />
-            </motion.div>
+            </m.div>
             <span>Integration</span>
             <h2>Seamless Connections</h2>
             <p>
@@ -159,7 +159,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="service">
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.02 }}
               className="image__container"
             >
@@ -168,7 +168,7 @@ export default function Landing() {
                 alt=""
                 loading="lazy"
               />
-            </motion.div>
+            </m.div>
             <span>Streamlined</span>
             <h2>Efficiency at your Fingertips</h2>
             <p>
@@ -321,7 +321,7 @@ export default function Landing() {
 
         <div className="teamItems">
           <div className="team">
-            <img
+            <m.img
               src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-05-03.png?updatedAt=1679246413143"
               loading="lazy"
               alt=""
@@ -341,7 +341,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="team">
-            <img
+            <m.img
               src="https://ik.imagekit.io/jckalabs/Zetsy/327268592_853679075707120_7819938780839728950_n.jpg?updatedAt=1679246534521"
               loading="lazy"
               alt=""
@@ -361,7 +361,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="team">
-            <img
+            <m.img
               src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878"
               loading="lazy"
               alt=""
@@ -381,7 +381,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="team">
-            <img
+            <m.img
               src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-46-12.png?updatedAt=1679248895986"
               loading="lazy"
               alt=""
@@ -401,7 +401,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="team">
-            <img
+            <m.img
               src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576"
               loading="lazy"
               alt=""

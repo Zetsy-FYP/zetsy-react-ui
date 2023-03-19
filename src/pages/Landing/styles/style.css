@@ -236,7 +236,7 @@
 }
 @media (max-width: 576px) {
   .landing__container .landing__zetsyForWho {
-    margin: 40px 3vw;
+    margin: 40px 5vw;
     padding-top: 10px;
     margin-top: 20px;
   }
@@ -278,6 +278,12 @@
   border-right: 1px solid #000;
   padding-right: 20px;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:first-child {
+    border: none;
+    padding-right: 0;
+  }
+}
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:first-child h1 {
   font-size: 3rem;
   margin: 30px 0;
@@ -306,12 +312,20 @@
 @media (max-width: 576px) {
   .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex {
     flex-wrap: wrap;
+    flex-direction: column;
+    border: none;
   }
 }
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex div {
   flex: 1 1 0;
   padding: 20px;
   padding-top: 0;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex div {
+    flex: 1;
+    padding: 0;
+  }
 }
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex div img {
   width: 100%;
@@ -324,8 +338,18 @@
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex div:first-child {
   border-right: 1px solid #000;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .flex div:first-child {
+    border: none;
+  }
+}
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .freelancers {
   padding: 20px;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .freelancers {
+    padding: 0;
+  }
 }
 .landing__container .landing__zetsyForWho .forWho__container .firstLevelChild:last-child .freelancers img {
   width: 100%;
@@ -340,6 +364,11 @@
   color: #e6e6e6;
   padding: 80px 0;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__subscribeBusiness img {
+    display: none;
+  }
+}
 .landing__container .landing__subscribeBusiness .title {
   display: flex;
   align-items: center;
@@ -352,6 +381,11 @@
   font-family: "Playfair Display", serif;
   font-size: 3.5rem;
   margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__subscribeBusiness .title h1 {
+    font-size: 2.5rem;
+  }
 }
 .landing__container .landing__subscribeBusiness .title p {
   font-size: 22px;

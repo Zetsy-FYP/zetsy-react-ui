@@ -20,7 +20,8 @@
     margin: 40px auto;
     max-width: 90vw;
   }
-  .landing__container .landing__introduction p:nth-child(4), .landing__container .landing__introduction p:nth-child(5) {
+  .landing__container .landing__introduction p:nth-child(4),
+  .landing__container .landing__introduction p:nth-child(5) {
     display: none;
   }
 }
@@ -71,12 +72,26 @@
 .landing__container .landing__services {
   margin: 0 1.5vw;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__services {
+    margin-top: 20px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+  }
+}
 .landing__container .landing__services h1 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   margin: 0;
   font-size: 42px;
   margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__services h1 {
+    font-size: 32px;
+    padding-left: 20px;
+    text-align: center;
+  }
 }
 .landing__container .landing__services .services__container {
   display: flex;
@@ -86,6 +101,7 @@
 @media (max-width: 576px) {
   .landing__container .landing__services .services__container {
     flex-wrap: wrap;
+    align-items: center;
   }
 }
 .landing__container .landing__services .services__container .service {
@@ -98,14 +114,28 @@
 @media (max-width: 576px) {
   .landing__container .landing__services .services__container .service {
     flex: 1;
+    min-width: 80vw;
+    border: none;
+    min-height: 0;
+    margin-bottom: 30px;
   }
 }
 .landing__container .landing__services .services__container .service:first-child {
   border-left: none;
   padding-left: 0;
 }
+@media (max-width: 576px) {
+  .landing__container .landing__services .services__container .service:first-child {
+    padding-left: 20px;
+  }
+}
 .landing__container .landing__services .services__container .service:last-child {
   padding-right: 0;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__services .services__container .service:last-child {
+    padding-right: 20px;
+  }
 }
 .landing__container .landing__services .services__container .service img {
   width: 100%;

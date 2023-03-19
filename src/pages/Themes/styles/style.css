@@ -7,6 +7,7 @@
 @media (max-width: 576px) {
   .themes__container {
     margin-top: 150px;
+    margin-bottom: 40px;
   }
 }
 .themes__container .themesItems {

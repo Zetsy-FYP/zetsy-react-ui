@@ -67,7 +67,7 @@ export default function Landing() {
       </div>
 
       <div className="landing__services">
-        <h1 data-aos="fade-right">Zetsy's Inventory</h1>
+        <h1>Zetsy's Inventory</h1>
 
         <div className="services__container">
           <div className="service">
@@ -176,13 +176,15 @@ export default function Landing() {
               fingertips with us.
             </p>
           </div>
+        </div>
+      </div>
 
       <div className="landing__projects">
         <h1>Zetsy's Projects</h1>
         <p>
           Transforming ideas into reality - Our portfolio showcases the power of
           <br />
-          innova
+          innovation and creativity at Zetsy.
         </p>
         <Marquee speed={35} pauseOnHover={true}>
           <ul>
@@ -199,7 +201,6 @@ export default function Landing() {
           </ul>
         </Marquee>
         <Marquee
-          data-aos="fade-right"
           speed={35}
           pauseOnHover={true}
           direction="right"
@@ -238,7 +239,9 @@ export default function Landing() {
 
       <div className="landing__zetsyForWho">
         <span className="title">start, scale, and save</span>
- data-aos="fade-right" className="firstLevelChild">
+
+        <div className="forWho__container">
+          <div className="firstLevelChild">
             <h1>
               Management and Online Presence is timely and expensive – we'll
               help with both.

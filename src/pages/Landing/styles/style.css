@@ -234,6 +234,7 @@
 }
 .landing__container .landing__zetsyForWho {
   margin: 80px 7vw;
+  padding-top: 10px;
 }
 @media (max-width: 576px) {
   .landing__container .landing__zetsyForWho {

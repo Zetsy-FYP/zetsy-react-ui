@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import React from "react";
 
 import "./styles/style.css";
@@ -55,7 +55,7 @@ export default function NavbarHome() {
 
   return (
     <div className="navbarHome__container">
-      <div className="menuHighlights left">
+      <div data-aos="fade-right" className="menuHighlights left">
         <div>
           <p>Made in</p>
           <h3>Nepal</h3>
@@ -70,23 +70,23 @@ export default function NavbarHome() {
         </div>
       </div>
       <div className="menu__container">
-        <div className="menuItems">
+        <div data-aos="fade-up" className="menuItems">
           <Button className="borderRight" onClick={() => handleMenu()}>
             <AnimatePresence>
               {isMenuCollapsed ? (
-                <motion.i
+                <m.i
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className="ri-close-fill"
-                ></motion.i>
+                ></m.i>
               ) : (
-                <motion.i
+                <m.i
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className="ri-menu-line"
-                ></motion.i>
+                ></m.i>
               )}
             </AnimatePresence>
           </Button>
@@ -108,14 +108,16 @@ export default function NavbarHome() {
             <i className="ri-shopping-cart-line"></i>
           </Button>
         </div>
+        <AnimatePresence>
         {!isFocused && window.scrollY !== 148.88 && inputValue === "" && (
-          <div className="menu__logo">
+          <m.div initial={{opacity: 0, scale: 0.9}} animate={{opacity: 1, scale: 1, duration: 1}} exit={{opacity: 0, scale: 0.9}} className="menu__logo">
             <h1 style={initialLogoStyle}>Zetsy.</h1>
-          </div>
+          </m.div>
         )}
+        </AnimatePresence>
 
         {isMenuCollapsed && (
-          <motion.div className="menuItems__container">
+          <m.div className="menuItems__container">
             <Button>Themes</Button>
             <Button>About</Button>
             <Button>Marketplace</Button>
@@ -148,10 +150,10 @@ export default function NavbarHome() {
                 <i className="ri-facebook-box-line"></i>
               </li>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </div>
-      <div className="menuHighlights right">
+      <div data-aos="fade-left" className="menuHighlights right">
         <div>
           <p>Easy</p>
           <h3>Integration</h3>

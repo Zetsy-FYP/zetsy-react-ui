@@ -82,10 +82,4 @@
   transform: translate(-50%, -50%);
   behavior: smooth;
   z-index: 4;
-}
-@media (max-width: 576px) {
-  .navbarHome__container .menu__container .menu__logo h1 {
-    left: 25%;
-    transform: translateX(-25%);
-  }
 }/*# sourceMappingURL=style.css.map */

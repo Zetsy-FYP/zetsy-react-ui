@@ -91,11 +91,6 @@
       transform: translate(-50%, -50%);
       behavior: smooth;
       z-index: 4;
-
-      @media (max-width: 576px){
-        left: 25%;
-        transform: translateX(-25%);
-      }
     }
   }
 }

@@ -9,6 +9,21 @@ export default function NavbarHome() {
   const [scrollYLogoTransform, setScrollYLogoTransform] = React.useState(0);
   const [scrollYLogoMargin, setScrollYLogoMargin] = React.useState(0);
 
+  // search input validation
+  const [inputValue, setInputValue] = React.useState("");
+
+  const [isMenuCollapsed, setIsMenuCollapsed] = React.useState(false);
+  const handleMenu = () => {
+    setIsMenuCollapsed(!isMenuCollapsed);
+    if (!isMenuCollapsed) {
+      setScrollYLogoTransform(148.88);
+      setScrollYLogoMargin(148.88);
+    } else {
+      setScrollYLogoTransform(window.scrollY);
+      setScrollYLogoMargin(window.scrollY);
+    }
+  };
+
   window.addEventListener("scroll", () => {
     setScrollYLogoTransform(window.scrollY >= 148.88 ? 148.88 : window.scrollY);
     setScrollYLogoMargin(window.scrollY);
@@ -19,10 +34,13 @@ export default function NavbarHome() {
       window.innerWidth > 576
         ? `${8 - (scrollYLogoTransform * 2.5) / 60}rem`
         : `${5 - (scrollYLogoTransform * 2.5) / 120}rem`,
-    top:
-      window.innerWidth > 576
-        ? `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px`
-        : `${scrollYLogoMargin >= 80 ? 55 : 23 - (scrollYLogoMargin - 120)}px`,
+    top: isMenuCollapsed
+      ? window.innerWidth > 576
+        ? "80px"
+        : "55px"
+      : window.innerWidth > 576
+      ? `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px`
+      : `${scrollYLogoMargin >= 80 ? 55 : 23 - (scrollYLogoMargin - 120)}px`,
   };
 
   const [isFocused, setIsFocused] = React.useState(false);
@@ -33,14 +51,6 @@ export default function NavbarHome() {
 
   const handleBlur = () => {
     setIsFocused(false);
-  };
-
-  // search input validation
-  const [inputValue, setInputValue] = React.useState("");
-
-  const [isMenuCollapsed, setIsMenuCollapsed] = React.useState(false);
-  const handleMenu = () => {
-    setIsMenuCollapsed(!isMenuCollapsed);
   };
 
   return (
@@ -71,9 +81,12 @@ export default function NavbarHome() {
                   className="ri-close-fill"
                 ></motion.i>
               ) : (
-                <motion.i initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }} className="ri-menu-line"></motion.i>
+                <motion.i
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="ri-menu-line"
+                ></motion.i>
               )}
             </AnimatePresence>
           </Button>

@@ -15,7 +15,7 @@ export default function NavbarHome() {
 console.log(window.innerWidth)
   const initialLogoStyle = {
     fontSize: window.innerWidth > 576 ? `${8 - (scrollYLogoTransform * 2.5) / 60}rem`: `${5 - (scrollYLogoTransform * 2.5) / 120}rem`,
-    top: window.innerWidth > 576 ? `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px` : `${scrollYLogoMargin >= 120 ? 55 : 25 - (scrollYLogoMargin - 120)}px`,
+    top: window.innerWidth > 576 ? `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px` : `${scrollYLogoMargin >= 110 ? 55 : 25 - (scrollYLogoMargin - 120)}px`,
   };
 
   const [isFocused, setIsFocused] = React.useState(false);

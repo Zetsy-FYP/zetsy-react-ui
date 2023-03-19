@@ -101,6 +101,11 @@
   font-family: "Playfair Display", serif;
   width: 100%;
 }
+@media (max-width: 576px) {
+  .navbarHome__container .menu__container .menuItems__container .MuiButton-root {
+    font-size: 22px;
+  }
+}
 .navbarHome__container .menu__container .menuItems__container p {
   cursor: pointer;
   font-size: 18px;
@@ -117,6 +122,12 @@
   align-items: center;
   margin-top: 25px;
   justify-content: space-around;
+}
+@media (max-width: 576px) {
+  .navbarHome__container .menu__container .menuItems__container .utilities .MuiButton-root {
+    font-size: 18px;
+    text-transform: capitalize;
+  }
 }
 .navbarHome__container .menu__container .menuItems__container .utilities .firstChild {
   text-align: center;

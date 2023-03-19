@@ -430,8 +430,8 @@
 .landing__container .landing__meetTheTeam .teamItems {
   display: flex;
   align-items: flex-start;
-  gap: 50px;
-  margin-top: 10px;
+  gap: 60px;
+  margin-top: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }

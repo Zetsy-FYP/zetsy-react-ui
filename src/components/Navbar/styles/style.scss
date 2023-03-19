@@ -108,6 +108,10 @@
         font-weight: 600;
         font-family: "Playfair Display", serif;
         width: 100%;
+
+        @media (max-width: 576px){
+          font-size: 22px;
+        }
       }
 
       p {
@@ -127,6 +131,13 @@
         align-items: center;
         margin-top: 25px;
         justify-content: space-around;
+
+        .MuiButton-root{
+          @media (max-width: 576px){
+            font-size: 18px;
+            text-transform: capitalize;
+          }
+        }
 
         .firstChild {
           text-align: center;

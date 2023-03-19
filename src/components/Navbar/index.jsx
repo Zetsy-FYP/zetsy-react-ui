@@ -118,9 +118,10 @@ export default function NavbarHome() {
 
         {isMenuCollapsed && (
           <m.div className="menuItems__container">
-            <Button>Themes</Button>
-            <Button>About</Button>
+            <Button>Themes: Your Taste</Button>
+            <Button>About Us</Button>
             <Button>Marketplace</Button>
+            <Button>Sign In / Register</Button>
             <p>Careers</p>
             <p>Roadmap</p>
             <p>FAQs</p>

@@ -405,4 +405,70 @@
 }
 .landing__container .landing__subscribeBusiness p {
   text-align: center;
+}
+.landing__container .landing__meetTheTeam {
+  padding: 80px 5vw;
+  border-bottom: 1px solid #000;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__meetTheTeam {
+    padding: 40px 3vw;
+  }
+}
+.landing__container .landing__meetTheTeam h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+}
+.landing__container .landing__meetTheTeam p {
+  margin: 40px 0;
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+.landing__container .landing__meetTheTeam .teamItems {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 10px;
+}
+@media (max-width: 576px) {
+  .landing__container .landing__meetTheTeam .teamItems {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.landing__container .landing__meetTheTeam .teamItems .team {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+}
+.landing__container .landing__meetTheTeam .teamItems .team img {
+  width: 350px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.landing__container .landing__meetTheTeam .teamItems .team span {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 10px 0 5px 0;
+}
+.landing__container .landing__meetTheTeam .teamItems .team span.post {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Oswald", serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+.landing__container .landing__meetTheTeam .teamItems .team .socialMedias {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.landing__container .landing__meetTheTeam .teamItems .team .socialMedias i {
+  font-size: 22px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

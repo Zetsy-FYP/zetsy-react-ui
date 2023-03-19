@@ -294,11 +294,90 @@ export default function Landing() {
           <div>
             <h1>Grow your business with us.</h1>
             <p>
-            <p>If you are looking to sell products locally or internationally, we provide you with all the necessary tools.</p>
+              <p>
+                If you are looking to sell products locally or internationally,
+                we provide you with all the necessary tools.
+              </p>
             </p>
             <Button>Register Your Business</Button>
-            </div>
+          </div>
           <img src={SpringR} loading="lazy" alt="" />
+        </div>
+      </div>
+
+      <div className="landing__meetTheTeam">
+        <h1>Meet The Team</h1>
+        <p>
+          Discover the faces and stories behind our brand's success.<br/> Meet the
+          Team and gain a deeper understanding of our shared mission,<br/> diverse
+          backgrounds, and unwavering dedication to delivering excellence.
+        </p>
+
+        <div className="teamItems">
+          <div className="team">
+            <img src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-05-03.png?updatedAt=1679246413143" loading="lazy" alt="" />
+            <span>Laxman Rai (Lex)</span>
+            <span className="post">Web3 Wizard</span>
+            <div className="socialMedias">
+              <div>
+                <i className="ri-facebook-line"></i>
+              </div>
+              <div>
+                <i className="ri-twitter-line"></i>
+              </div>
+              <div>
+                <i className="ri-linkedin-line"></i>
+              </div>
+            </div>
+          </div>
+          <div className="team">
+            <img src="https://ik.imagekit.io/jckalabs/Zetsy/327268592_853679075707120_7819938780839728950_n.jpg?updatedAt=1679246534521" loading="lazy" alt="" />
+            <span>Sudeep Mishra</span>
+            <span className="post">Platform Wizard</span>
+            <div className="socialMedias">
+              <div>
+                <i className="ri-facebook-line"></i>
+              </div>
+              <div>
+                <i className="ri-twitter-line"></i>
+              </div>
+              <div>
+                <i className="ri-linkedin-line"></i>
+              </div>
+            </div>
+          </div>
+          <div className="team">
+            <img src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878" loading="lazy" alt="" />
+            <span>Suraj Gaire</span>
+            <span className="post">Themes Wizard</span>
+            <div className="socialMedias">
+              <div>
+                <i className="ri-facebook-line"></i>
+              </div>
+              <div>
+                <i className="ri-twitter-line"></i>
+              </div>
+              <div>
+                <i className="ri-linkedin-line"></i>
+              </div>
+            </div>
+          </div>
+          <div className="team">
+            <img src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576" loading="lazy" alt="" />
+            <span>Nirdesh Acharya Dixit</span>
+            <span className="post">Growth Hacker</span>
+            <div className="socialMedias">
+              <div>
+                <i className="ri-facebook-line"></i>
+              </div>
+              <div>
+                <i className="ri-twitter-line"></i>
+              </div>
+              <div>
+                <i className="ri-linkedin-line"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

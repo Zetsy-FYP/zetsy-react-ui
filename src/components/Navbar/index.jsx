@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { AnimatePresence, m } from "framer-motion";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./styles/style.css";
 
@@ -52,6 +53,13 @@ export default function NavbarHome() {
   const handleBlur = () => {
     setIsFocused(false);
   };
+
+  const navigate = useNavigate();
+
+  const handleNavigation = (e) => {
+    setIsMenuCollapsed(false)
+    navigate(e)
+  }
 
   return (
     <div className="navbarHome__container">
@@ -110,7 +118,7 @@ export default function NavbarHome() {
         </div>
         <AnimatePresence>
         {!isFocused && window.scrollY !== 148.88 && inputValue === "" && (
-          <m.div initial={{opacity: 0, scale: 0.9}} animate={{opacity: 1, scale: 1, duration: 1}} exit={{opacity: 0, scale: 0.9}} className="menu__logo">
+          <m.div onClick={() => handleNavigation("/")} initial={{opacity: 0, scale: 0.9}} animate={{opacity: 1, scale: 1, duration: 1}} exit={{opacity: 0, scale: 0.9}} className="menu__logo">
             <h1 style={initialLogoStyle}>Zetsy.</h1>
           </m.div>
         )}
@@ -118,12 +126,13 @@ export default function NavbarHome() {
 
         {isMenuCollapsed && (
           <m.div className="menuItems__container">
-            <Button>Themes: Your Taste</Button>
+            <Button onClick={() => handleNavigation("themes")}>Themes: Your Taste</Button>
             <Button>About Us</Button>
             <Button>Marketplace</Button>
             <Button>Sign In / Register</Button>
             <p>Careers</p>
             <p>Roadmap</p>
+            <p>Highlighted Projects</p>
             <p>FAQs</p>
             <p>Contact</p>
 

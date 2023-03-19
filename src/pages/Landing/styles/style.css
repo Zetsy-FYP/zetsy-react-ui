@@ -409,6 +409,7 @@
 .landing__container .landing__meetTheTeam {
   padding: 80px 5vw;
   border-bottom: 1px solid #000;
+  text-align: center;
 }
 @media (max-width: 576px) {
   .landing__container .landing__meetTheTeam {
@@ -417,7 +418,7 @@
 }
 .landing__container .landing__meetTheTeam h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .landing__container .landing__meetTheTeam p {
   margin: 40px 0;
@@ -430,6 +431,7 @@
   align-items: flex-start;
   gap: 50px;
   margin-top: 10px;
+  justify-content: center;
 }
 @media (max-width: 576px) {
   .landing__container .landing__meetTheTeam .teamItems {

@@ -432,6 +432,7 @@
   .landing__meetTheTeam {
     padding: 80px 5vw;
     border-bottom: 1px solid #000;
+    text-align: center;
 
     @media (max-width: 576px){
       padding: 40px 3vw;
@@ -439,7 +440,7 @@
 
     h1{
       font-family: "Playfair Display", serif;
-      font-size: 3em;
+      font-size: 2.5em;
     }
 
     p{
@@ -454,6 +455,7 @@
       align-items: flex-start;
       gap: 50px;
       margin-top: 10px;
+      justify-content: center;
 
       @media (max-width: 576px){
         flex-direction: column;

@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
 import "./styles/style.css";
@@ -12,10 +13,16 @@ export default function NavbarHome() {
     setScrollYLogoTransform(window.scrollY >= 148.88 ? 148.88 : window.scrollY);
     setScrollYLogoMargin(window.scrollY);
   });
-console.log(window.innerWidth)
+  console.log(window.innerWidth);
   const initialLogoStyle = {
-    fontSize: window.innerWidth > 576 ? `${8 - (scrollYLogoTransform * 2.5) / 60}rem`: `${5 - (scrollYLogoTransform * 2.5) / 120}rem`,
-    top: window.innerWidth > 576 ? `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px` : `${scrollYLogoMargin >= 80 ? 55 : 23 - (scrollYLogoMargin - 120)}px`,
+    fontSize:
+      window.innerWidth > 576
+        ? `${8 - (scrollYLogoTransform * 2.5) / 60}rem`
+        : `${5 - (scrollYLogoTransform * 2.5) / 120}rem`,
+    top:
+      window.innerWidth > 576
+        ? `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px`
+        : `${scrollYLogoMargin >= 80 ? 55 : 23 - (scrollYLogoMargin - 120)}px`,
   };
 
   const [isFocused, setIsFocused] = React.useState(false);
@@ -30,6 +37,11 @@ console.log(window.innerWidth)
 
   // search input validation
   const [inputValue, setInputValue] = React.useState("");
+
+  const [isMenuCollapsed, setIsMenuCollapsed] = React.useState(false);
+  const handleMenu = () => {
+    setIsMenuCollapsed(!isMenuCollapsed);
+  };
 
   return (
     <div className="navbarHome__container">
@@ -49,14 +61,32 @@ console.log(window.innerWidth)
       </div>
       <div className="menu__container">
         <div className="menuItems">
-          <Button className="borderRight">
-            <i className="ri-menu-line"></i>
+          <Button className="borderRight" onClick={() => handleMenu()}>
+            <AnimatePresence>
+              {isMenuCollapsed ? (
+                <motion.i
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="ri-close-fill"
+                ></motion.i>
+              ) : (
+                <motion.i initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }} className="ri-menu-line"></motion.i>
+              )}
+            </AnimatePresence>
           </Button>
           <Button>
             <i className="ri-search-2-line"></i>
           </Button>
 
-          <input type="text" onChange={e => setInputValue(e.target.value)} onFocus={handleFocus} onBlur={handleBlur} />
+          <input
+            type="text"
+            onChange={(e) => setInputValue(e.target.value)}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+          />
 
           <Button className="borderRight">
             <i className="ri-map-pin-line"></i>
@@ -69,6 +99,43 @@ console.log(window.innerWidth)
           <div className="menu__logo">
             <h1 style={initialLogoStyle}>Zetsy.</h1>
           </div>
+        )}
+
+        {isMenuCollapsed && (
+          <motion.div className="menuItems__container">
+            <Button>Themes</Button>
+            <Button>About</Button>
+            <Button>Marketplace</Button>
+            <p>Careers</p>
+            <p>Roadmap</p>
+            <p>FAQs</p>
+            <p>Contact</p>
+
+            <div className="utilities">
+              <div className="firstChild">
+                <div className="darkMode__container">
+                  <div className="circle"></div>
+                </div>
+                <p>Dark Mode</p>
+              </div>
+              <div className="firstChild">
+                <i className="ri-settings-4-line"></i>
+                <p>Settings</p>
+              </div>
+            </div>
+
+            <div className="socialMedias">
+              <li>
+                <i className="ri-instagram-line"></i>
+              </li>
+              <li>
+                <i className="ri-linkedin-box-line"></i>
+              </li>
+              <li>
+                <i className="ri-facebook-box-line"></i>
+              </li>
+            </div>
+          </motion.div>
         )}
       </div>
       <div className="menuHighlights right">

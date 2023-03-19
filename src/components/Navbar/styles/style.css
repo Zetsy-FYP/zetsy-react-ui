@@ -74,6 +74,92 @@
   font-size: 22px;
   color: #000;
 }
+.navbarHome__container .menu__container .menuItems__container {
+  position: fixed;
+  top: 110px;
+  max-width: 20.5vw;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  background: #f4f5f0;
+  z-index: 4;
+  padding-top: 30px;
+}
+@media (max-width: 576px) {
+  .navbarHome__container .menu__container .menuItems__container {
+    max-width: 93.5vw;
+    min-width: 93.5vw;
+  }
+}
+.navbarHome__container .menu__container .menuItems__container .MuiButton-root {
+  min-width: 0;
+  width: 20.5vw;
+  padding: 0;
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+.navbarHome__container .menu__container .menuItems__container p {
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.8;
+  font-weight: 500;
+  font-family: "Lato", serif;
+}
+.navbarHome__container .menu__container .menuItems__container .utilities {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  justify-content: space-around;
+}
+.navbarHome__container .menu__container .menuItems__container .utilities .firstChild {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.navbarHome__container .menu__container .menuItems__container .utilities .firstChild:first-child {
+  border-right: 1px solid #000;
+  padding-right: 1.5vw;
+}
+.navbarHome__container .menu__container .menuItems__container .utilities .firstChild i {
+  font-size: 22px;
+}
+.navbarHome__container .menu__container .menuItems__container .utilities .firstChild .darkMode__container {
+  width: 45px;
+  height: 25px;
+  padding: 3px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  border-radius: 45px;
+  border-right: 1px solid #000;
+}
+.navbarHome__container .menu__container .menuItems__container .utilities .firstChild .darkMode__container .circle {
+  height: 18px;
+  width: 18px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navbarHome__container .menu__container .menuItems__container .utilities .firstChild .darkMode__container .circle:hover {
+  background: #000;
+}
+.navbarHome__container .menu__container .menuItems__container .socialMedias {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 0;
+}
+.navbarHome__container .menu__container .menuItems__container .socialMedias i {
+  font-size: 24px;
+  cursor: pointer;
+}
 .navbarHome__container .menu__container .menu__logo h1 {
   font-family: "Bodoni Moda", serif;
   font-weight: 700;

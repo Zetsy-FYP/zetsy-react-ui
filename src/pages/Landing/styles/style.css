@@ -67,6 +67,7 @@
 @media (max-width: 576px) {
   .landing__container .landing__introduction .joinZetsy {
     margin-top: 10px;
+    font-size: 22px;
   }
 }
 .landing__container .landing__introduction .joinZetsy p {

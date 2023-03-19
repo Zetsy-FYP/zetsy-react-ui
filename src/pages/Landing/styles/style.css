@@ -447,7 +447,7 @@
   min-width: 300px;
 }
 .landing__container .landing__meetTheTeam .teamItems .team img {
-  width: 320px;
+  width: 100%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;

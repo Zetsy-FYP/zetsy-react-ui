@@ -1,1 +1,18 @@
-/*# sourceMappingURL=style.css.map */
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 2vw;
+  font-size: 20px;
+}
+.footer__container * {
+  font-family: "Oswald", serif;
+}
+.footer__container p:first-child {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-size: 26px;
+}
+.footer__container p:last-child {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

@@ -12,9 +12,9 @@ export default function NavbarHome() {
     setScrollYLogoTransform(window.scrollY >= 148.88 ? 148.88 : window.scrollY);
     setScrollYLogoMargin(window.scrollY);
   });
-
+console.log(window.innerWidth)
   const initialLogoStyle = {
-    fontSize: `${8 - (scrollYLogoTransform * 2.5) / 60}rem`,
+    fontSize: window.innerWidth > 576 ? `${8 - (scrollYLogoTransform * 2.5) / 60}rem`: `${4 - (scrollYLogoTransform * 2.5) / 120}rem`,
     top: `${scrollYLogoMargin >= 140 ? 80 : 80 - (scrollYLogoMargin - 140)}px`,
   };
 

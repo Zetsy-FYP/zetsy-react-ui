@@ -10,6 +10,10 @@
     gap: 3rem;
     flex: 1 1 0;
 
+    @media (max-width: 576px){
+      display: none;
+    }
+
     div:nth-child(2) {
       border-left: 1px solid #000;
       border-right: 1px solid #000;
@@ -45,6 +49,11 @@
       padding: 7px 10px;
       gap: 10px;
       position: fixed;
+      z-index: 3;
+      
+      @media (max-width:576px){
+        max-width: 93.5vw;
+      }
 
       input {
         flex: 1;
@@ -81,6 +90,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
       behavior: smooth;
+      z-index: 4;
+
+      @media (max-width: 576px){
+        left: 25%;
+        transform: translateX(-25%);
+      }
     }
   }
 }

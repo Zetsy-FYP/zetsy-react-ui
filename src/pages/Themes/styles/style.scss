@@ -9,6 +9,21 @@
     margin-bottom: 40px;
   }
 
+  .searchThemes__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    input{
+      font-family: "Oswald", serif;
+      font-size: 20px;
+      width: 32vw;
+      padding: 10px 20px;
+      background: transparent;
+    }
+  }
+
   .themesItems {
     display: flex;
     align-items: center;

@@ -57,9 +57,10 @@ export default function NavbarHome() {
   const navigate = useNavigate();
 
   const handleNavigation = (e) => {
-    setIsMenuCollapsed(false)
-    navigate(e)
-  }
+    setIsMenuCollapsed(false);
+    navigate(e);
+    window.scrollTo(0,0)
+  };
 
   return (
     <div className="navbarHome__container">
@@ -117,17 +118,25 @@ export default function NavbarHome() {
           </Button>
         </div>
         <AnimatePresence>
-        {!isFocused && window.scrollY !== 148.88 && inputValue === "" && (
-          <m.div onClick={() => handleNavigation("/")} initial={{opacity: 0, scale: 0.9}} animate={{opacity: 1, scale: 1, duration: 1}} exit={{opacity: 0, scale: 0.9}} className="menu__logo">
-            <h1 style={initialLogoStyle}>Zetsy.</h1>
-          </m.div>
-        )}
+          {!isFocused && window.scrollY !== 148.88 && inputValue === "" && (
+            <m.div
+              onClick={() => handleNavigation("/")}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1, duration: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="menu__logo"
+            >
+              <h1 style={initialLogoStyle}>Zetsy.</h1>
+            </m.div>
+          )}
         </AnimatePresence>
 
         {isMenuCollapsed && (
           <m.div className="menuItems__container">
-            <Button onClick={() => handleNavigation("themes")}>Themes: Your Taste</Button>
-            <Button>About Us</Button>
+            <Button onClick={() => handleNavigation("themes")}>
+              Themes: Your Taste
+            </Button>
+            <Button onClick={() => handleNavigation("about")}>About Us</Button>
             <Button>Marketplace</Button>
             <Button>Sign In / Register</Button>
             <p>Careers</p>
@@ -144,7 +153,10 @@ export default function NavbarHome() {
                 <p>Dark Mode</p>
               </div>
               <div className="firstChild">
-                <m.i whileHover={{rotate: 60}} className="ri-settings-4-line"></m.i>
+                <m.i
+                  whileHover={{ rotate: 60 }}
+                  className="ri-settings-4-line"
+                ></m.i>
                 <p>Settings</p>
               </div>
             </div>

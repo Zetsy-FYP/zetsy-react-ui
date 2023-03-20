@@ -1,12 +1,20 @@
 .navbarHome__container {
+  display: -webkit-box; /* Safari */
+  display: -webkit-flex; /* Safari 6.1+ */
   display: flex;
+  -webkit-box-align: center; /* Safari */
+  -webkit-align-items: center; /* Safari */
   align-items: center;
+  -webkit-box-pack: justify; /* Safari */
+  -webkit-justify-content: space-between; /* Safari */
   justify-content: space-between;
   padding: 30px 3vw;
 
   .menuHighlights {
     display: flex;
     align-items: center;
+    -moz-column-gap: 3rem; /* Firefox */
+    -webkit-column-gap: 3rem; /* Safari */
     gap: 3rem;
     flex: 1 1 0;
 
@@ -41,7 +49,7 @@
     max-width: 22vw;
     position: relative;
 
-    h1{
+    h1 {
       cursor: pointer;
     }
 
@@ -113,7 +121,7 @@
         font-family: "Playfair Display", serif;
         width: 100%;
 
-        @media (max-width: 576px){
+        @media (max-width: 576px) {
           font-size: 22px;
         }
       }
@@ -136,8 +144,8 @@
         margin-top: 25px;
         justify-content: space-around;
 
-        .MuiButton-root{
-          @media (max-width: 576px){
+        .MuiButton-root {
+          @media (max-width: 576px) {
             font-size: 18px;
             text-transform: capitalize;
           }
@@ -182,13 +190,13 @@
         }
       }
 
-      .socialMedias{
+      .socialMedias {
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding: 12px 0;
 
-        i{
+        i {
           font-size: 24px;
           cursor: pointer;
         }

@@ -10,6 +10,19 @@
     margin-bottom: 40px;
   }
 }
+.themes__container .searchThemes__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.themes__container .searchThemes__container input {
+  font-family: "Oswald", serif;
+  font-size: 20px;
+  width: 32vw;
+  padding: 10px 20px;
+  background: transparent;
+}
 .themes__container .themesItems {
   display: flex;
   align-items: center;

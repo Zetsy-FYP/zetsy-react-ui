@@ -1,12 +1,14 @@
-.navbarHome__container {
-  display: flex;
-  align-items: center;
+.navbarHome__container { /* Safari */ /* Safari 6.1+ */
+  display: flex; /* Safari */ /* Safari */
+  align-items: center; /* Safari */ /* Safari */
   justify-content: space-between;
   padding: 30px 3vw;
 }
 .navbarHome__container .menuHighlights {
   display: flex;
   align-items: center;
+  -moz-column-gap: 3rem; /* Firefox */
+  -webkit-column-gap: 3rem; /* Safari */
   gap: 3rem;
   flex: 1 1 0;
 }

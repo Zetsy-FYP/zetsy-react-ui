@@ -1,0 +1,146 @@
+.aboutUs__container {
+  margin-top: 250px;
+  max-width: 100vw;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #000;
+
+  @media (max-width: 576px) {
+    margin-top: 150px;
+    padding-bottom: 40px;
+  }
+
+  .landingBanner {
+    padding: 40px 2vw;
+    font-size: 17rem;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+
+    * {
+      font-family: "Oswald", serif;
+      overflow: hidden;
+    }
+
+    p,
+    div {
+      line-height: 1;
+    }
+
+    div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      p:last-child {
+        font-size: 3.5rem;
+        text-transform: initial;
+        color: #b6b6b6;
+        line-height: 1.4;
+      }
+    }
+
+    div:last-child {
+      display: flex;
+      justify-content: right;
+    }
+  }
+
+  .zetsyIntroduction {
+    display: flex;
+    align-items: flex-start;
+    margin: 80px 3vw;
+
+    h1 {
+      flex: 2;
+      font-size: 4rem;
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+    }
+
+    div {
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 0 2vw;
+      border-left: 1px solid #000;
+      padding-left: 60px;
+      p {
+        font-size: 1.4rem;
+        font-family: "Lato", serif;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .zetsyImages {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    justify-content: center;
+    margin: 0 3vw;
+
+    img {
+      flex: 1 1 0;
+      width: 100%;
+      height: 1100px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .zetsyCommunity {
+    margin: 80px 0;
+    padding: 80px 3vw;
+    background: #000;
+    color: #fff;
+    * {
+      font-family: "Playfair Display", serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 5rem;
+      margin-bottom: 40px;
+
+      &.divider{
+        margin-bottom: 0;
+      }
+    }
+
+    .community {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2vw;
+
+      h2{
+        font-size: 5rem;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        line-height: 1.3;
+      }
+
+      div {
+        flex: 1 1 0;
+
+        img {
+          width: 100%;
+          margin-top: 40px;
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

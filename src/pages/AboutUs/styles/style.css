@@ -1,1 +1,131 @@
-/*# sourceMappingURL=style.css.map */
+.aboutUs__container {
+  margin-top: 250px;
+  max-width: 100vw;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #000;
+}
+@media (max-width: 576px) {
+  .aboutUs__container {
+    margin-top: 150px;
+    padding-bottom: 40px;
+  }
+}
+.aboutUs__container .landingBanner {
+  padding: 40px 2vw;
+  font-size: 17rem;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+.aboutUs__container .landingBanner * {
+  font-family: "Oswald", serif;
+  overflow: hidden;
+}
+.aboutUs__container .landingBanner p,
+.aboutUs__container .landingBanner div {
+  line-height: 1;
+}
+.aboutUs__container .landingBanner div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.aboutUs__container .landingBanner div:nth-child(2) p:last-child {
+  font-size: 3.5rem;
+  text-transform: initial;
+  color: #b6b6b6;
+  line-height: 1.4;
+}
+.aboutUs__container .landingBanner div:last-child {
+  display: flex;
+  justify-content: right;
+}
+.aboutUs__container .zetsyIntroduction {
+  display: flex;
+  align-items: flex-start;
+  margin: 80px 3vw;
+}
+.aboutUs__container .zetsyIntroduction h1 {
+  flex: 2;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+.aboutUs__container .zetsyIntroduction div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0 2vw;
+  border-left: 1px solid #000;
+  padding-left: 60px;
+}
+.aboutUs__container .zetsyIntroduction div h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.aboutUs__container .zetsyIntroduction div p {
+  font-size: 1.4rem;
+  font-family: "Lato", serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.aboutUs__container .zetsyImages {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  justify-content: center;
+  margin: 0 3vw;
+}
+.aboutUs__container .zetsyImages img {
+  flex: 1 1 0;
+  width: 100%;
+  height: 1100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.aboutUs__container .zetsyCommunity {
+  margin: 80px 0;
+  padding: 80px 3vw;
+  background: #000;
+  color: #fff;
+}
+.aboutUs__container .zetsyCommunity * {
+  font-family: "Playfair Display", serif;
+}
+.aboutUs__container .zetsyCommunity h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 40px;
+}
+.aboutUs__container .zetsyCommunity h1.divider {
+  margin-bottom: 0;
+}
+.aboutUs__container .zetsyCommunity .community {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+.aboutUs__container .zetsyCommunity .community h2 {
+  font-size: 5rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+.aboutUs__container .zetsyCommunity .community div {
+  flex: 1 1 0;
+}
+.aboutUs__container .zetsyCommunity .community div img {
+  width: 100%;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.aboutUs__container .zetsyCommunity .community div p {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */

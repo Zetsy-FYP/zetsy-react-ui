@@ -41,6 +41,10 @@
     max-width: 22vw;
     position: relative;
 
+    h1{
+      cursor: pointer;
+    }
+
     .menuItems {
       background: #f4f5f0;
       display: flex;

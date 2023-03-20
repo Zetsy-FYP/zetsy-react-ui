@@ -37,6 +37,9 @@
   max-width: 22vw;
   position: relative;
 }
+.navbarHome__container .menu__container h1 {
+  cursor: pointer;
+}
 .navbarHome__container .menu__container .menuItems {
   background: #f4f5f0;
   display: flex;

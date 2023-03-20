@@ -1,13 +1,11 @@
 .aboutUs__container {
   margin-top: 250px;
   max-width: 100vw;
-  padding-bottom: 80px;
   border-bottom: 1px solid #000;
 }
 @media (max-width: 576px) {
   .aboutUs__container {
     margin-top: 150px;
-    padding-bottom: 40px;
   }
 }
 .aboutUs__container .landingBanner {
@@ -90,6 +88,7 @@
 }
 .aboutUs__container .zetsyCommunity {
   margin: 80px 0;
+  margin-bottom: 0;
   padding: 80px 3vw;
   background: #000;
   color: #fff;

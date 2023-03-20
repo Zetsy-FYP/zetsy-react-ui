@@ -62,6 +62,7 @@
       gap: 10px;
       position: fixed;
       z-index: 3;
+      width: 22.06vw;
 
       @media (max-width: 576px) {
         max-width: 93.5vw;
@@ -98,7 +99,9 @@
     .menuItems__container {
       position: fixed;
       top: 110px;
-      width: 20.5vw;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 22.05vw;
       display: flex;
       flex-direction: column;
       border: 2px solid #000;

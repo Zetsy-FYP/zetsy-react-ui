@@ -115,7 +115,7 @@ export default function AboutUs() {
             <p>Jessica Singh Shresth</p>
             <span>Finance Manager</span>
             <img
-              src="https://scontent.fktm20-1.fna.fbcdn.net/v/t31.18172-8/24785403_1986016714989119_924093378819152726_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=KhX6sIu3FSAAX90RI1Q&_nc_ht=scontent.fktm20-1.fna&oh=00_AfBm8OEVZkSf4mAlcJ1Igb0sv7uhRa0T8Irr0wm0huiW8w&oe=64401276"
+              src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-22_22-01-54.png?updatedAt=1679501928957"
               loading="lazy"
               alt=""
             />

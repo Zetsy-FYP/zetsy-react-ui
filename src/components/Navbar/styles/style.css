@@ -39,6 +39,11 @@
   max-width: 22vw;
   position: relative;
 }
+@media (max-width: 576px) {
+  .navbarHome__container .menu__container {
+    max-width: 100vw;
+  }
+}
 .navbarHome__container .menu__container h1 {
   cursor: pointer;
 }
@@ -56,6 +61,7 @@
 @media (max-width: 576px) {
   .navbarHome__container .menu__container .menuItems {
     max-width: 93.5vw;
+    width: 100%;
   }
 }
 .navbarHome__container .menu__container .menuItems input {

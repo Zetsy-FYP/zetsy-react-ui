@@ -27,8 +27,8 @@ export default function Landing() {
       <div className="landing__introduction">
         <h1>
           "Unleash the full potential of your online presence with{" "}
-          <span>Zetsy</span>. Let<br/> us be the guiding star that leads your
-          business to success in the<br/> digital realm."
+          <span>Zetsy</span>. Let us be the guiding star that leads your
+          business to success in the digital realm."
         </h1>
 
         <p className="star">*</p>

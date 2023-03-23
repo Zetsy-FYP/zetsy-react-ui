@@ -4,18 +4,33 @@ import React from "react";
 import "./styles/style.css";
 
 export default function Authentication() {
+  const [formType, setFormType] = React.useState("login");
+
+  const handleSetFormType = (type) => {
+    setFormType(type);
+  };
+
   return (
     <div className="authentication__controller">
       <form>
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
-        <div className="utilites">
-        <p>Must be 8 characters at least.</p>
-        <p>Forgot Password?</p>
+        {formType === "signup" && (
+          <input type="password" placeholder="Confirm Password" />
+        )}
+        <div className="utilities">
+          <p>Must be 8 characters at least.</p>
+          {formType === "login" && <p>Forgot Password?</p>}
         </div>
-        <Button className="authForm__button">Login</Button>
+        <Button className="authForm__button">
+          {formType === "login" ? "Login" : "Sign Up"}
+        </Button>
       </form>
-      <p className="divider">OR</p>
+      <div className="divider">
+        <div></div>
+        <p>OR</p>
+        <div></div>
+      </div>
       <div className="socialAuthentications">
         <Button>
           <i className="ri-google-fill"></i>
@@ -27,6 +42,18 @@ export default function Authentication() {
           <i className="ri-facebook-fill"></i>
         </Button>
       </div>
+      {formType === "login" && (
+        <div className="utilities mg-bttm">
+          <p>Don't have an account?</p>
+          <p onClick={() => handleSetFormType("signup")}>Create Account</p>
+        </div>
+      )}
+      {formType === "signup" && (
+        <div className="utilities mg-bttm-signup">
+          <p>Already have an account?</p>
+          <p onClick={() => handleSetFormType("login")}>Login</p>
+        </div>
+      )}
     </div>
   );
 }

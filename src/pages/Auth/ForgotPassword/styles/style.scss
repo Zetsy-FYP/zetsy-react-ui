@@ -1,0 +1,15 @@
+.forgotPassword__container {
+  margin-top: 250px;
+  max-width: 100vw;
+  border-bottom: 1px solid #000;
+  padding-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 576px) {
+    margin-top: 150px;
+  }
+}

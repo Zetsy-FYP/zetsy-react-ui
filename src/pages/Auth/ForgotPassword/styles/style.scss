@@ -12,4 +12,60 @@
   @media (max-width: 576px) {
     margin-top: 150px;
   }
+
+  .utilities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+
+    &.mg-bttm-forgot{
+        margin-bottom: 80px;
+    }
+
+    p:last-child {
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    .utilities {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+
+      p:last-child {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+
+    input {
+      font-family: "Oswald", serif;
+      font-size: 22px;
+      min-width: 25vw;
+      padding: 10px 8px;
+      background: transparent;
+    }
+
+    .authForm__button {
+      font-family: "Oswald", serif;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      font-size: 19px;
+      padding: 15px 0;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./styles/style.css";
 
@@ -8,6 +9,13 @@ export default function Authentication() {
 
   const handleSetFormType = (type) => {
     setFormType(type);
+  };
+
+  const navigation = useNavigate();
+
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+    navigation("/forgot");
   };
 
   return (
@@ -20,7 +28,7 @@ export default function Authentication() {
         )}
         <div className="utilities">
           <p>Must be 8 characters at least.</p>
-          {formType === "login" && <p>Forgot Password?</p>}
+          {formType === "login" && <p onClick={() => handleNavigation()}>Forgot Password?</p>}
         </div>
         <Button className="authForm__button">
           {formType === "login" ? "Login" : "Sign Up"}

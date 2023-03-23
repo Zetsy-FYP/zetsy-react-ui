@@ -58,8 +58,10 @@ export default function NavbarHome() {
 
   const handleNavigation = (e) => {
     setIsMenuCollapsed(false);
+    window.scrollTo(0, 0);
+    setScrollYLogoTransform(window.scrollY);
+    setScrollYLogoMargin(window.scrollY);
     navigate(e);
-    window.scrollTo(0,0)
   };
 
   return (
@@ -138,7 +140,9 @@ export default function NavbarHome() {
             </Button>
             <Button onClick={() => handleNavigation("about")}>About Us</Button>
             <Button>Marketplace</Button>
-            <Button>Sign In / Register</Button>
+            <Button onClick={() => handleNavigation("auth")}>
+              Sign In / Register
+            </Button>
             <p>Careers</p>
             <p>Roadmap</p>
             <p>Highlighted Projects</p>

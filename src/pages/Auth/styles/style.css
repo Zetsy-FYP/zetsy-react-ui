@@ -1,1 +1,60 @@
-/*# sourceMappingURL=style.css.map */
+.authentication__controller {
+  margin-top: 250px;
+  max-width: 100vw;
+  border-bottom: 1px solid #000;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 576px) {
+  .authentication__controller {
+    margin-top: 150px;
+  }
+}
+.authentication__controller .socialAuthentications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.authentication__controller .socialAuthentications .MuiButton-root {
+  background: #000;
+  color: #fff;
+  font-size: 23px;
+}
+.authentication__controller form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.authentication__controller form input {
+  font-family: "Oswald", serif;
+  font-size: 22px;
+  min-width: 25vw;
+  padding: 10px 8px;
+  background: transparent;
+}
+.authentication__controller form .utilites {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.authentication__controller form .utilites p:last-child {
+  color: #000;
+  font-weight: 600;
+}
+.authentication__controller form .authForm__button {
+  font-family: "Oswald", serif;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-size: 19px;
+  padding: 12px 0;
+}/*# sourceMappingURL=style.css.map */

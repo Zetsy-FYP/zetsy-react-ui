@@ -43,6 +43,13 @@
   justify-content: space-between;
   font-size: 18px;
 }
+@media (max-width: 576px) {
+  .forgotPassword__container form .utilities {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 19px;
+  }
+}
 .forgotPassword__container form .utilities p:last-child {
   color: #000;
   font-weight: 600;
@@ -54,6 +61,12 @@
   padding: 10px 8px;
   background: transparent;
 }
+@media (max-width: 576px) {
+  .forgotPassword__container form input {
+    min-width: 89vw;
+    font-size: 18px;
+  }
+}
 .forgotPassword__container form .authForm__button {
   font-family: "Oswald", serif;
   width: 100%;
@@ -61,4 +74,9 @@
   color: #fff;
   font-size: 19px;
   padding: 15px 0;
+}
+@media (max-width: 576px) {
+  .forgotPassword__container form .authForm__button {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */

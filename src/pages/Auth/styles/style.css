@@ -96,6 +96,7 @@
 @media (max-width: 576px) {
   .authentication__controller form input {
     min-width: 89vw;
+    font-size: 19px;
   }
 }
 .authentication__controller form .authForm__button {

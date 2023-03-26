@@ -13,8 +13,8 @@
             "destination": "/auth"
         },
         {
-            "source": "/themses",
-            "destination": "/themses"
+            "source": "/themes",
+            "destination": "/themes"
         },
         {
             "source": "/about",

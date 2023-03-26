@@ -14,6 +14,21 @@
     color: #fff;
     text-transform: uppercase;
 
+    @media (max-width: 576px) {
+      font-size: 5rem;
+
+      p,
+      div {
+        line-height: 1.5;
+      }
+
+      div:nth-child(2) {
+        p:last-child {
+          display: none;
+        }
+      }
+    }
+
     * {
       font-family: "Oswald", serif;
       overflow: hidden;
@@ -28,7 +43,11 @@
       display: flex;
       align-items: center;
       justify-content: right;
-      
+
+      @media (max-width: 576px) {
+        justify-content: left;
+      }
+
       p:last-child {
         font-size: 3.5rem;
         text-transform: initial;
@@ -48,18 +67,26 @@
     align-items: flex-start;
     margin: 80px 3vw;
 
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 3vw;
+      gap: 30px;
+    }
+
     h1 {
       flex: 2;
       font-size: 3.5rem;
       font-family: "Playfair Display", serif;
       font-weight: 400;
+
+      @media (max-width: 576px) {
+        font-size: 2rem;
+        text-align: center;
+      }
     }
 
     div {
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 500;
-      }
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -69,11 +96,27 @@
       margin: 0 2vw;
       border-left: 1px solid #000;
       padding-left: 60px;
+
+      @media (max-width: 576px){
+        border-left: none;
+        padding-left: 0;
+        align-items: center;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+
       p {
         font-size: 1.4rem;
         font-family: "Lato", serif;
         font-weight: 300;
         line-height: 1.5;
+
+        @media (max-width: 576px) {
+          text-align: center;
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -85,12 +128,22 @@
     justify-content: center;
     margin: 0 3vw;
 
+    @media (max-width: 576px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
     img {
       flex: 1 1 0;
       width: 100%;
       height: 1100px;
       object-fit: cover;
       object-position: center;
+
+      @media (max-width: 576px) {
+        flex: 1;
+        height: 500px;
+      }
     }
   }
 
@@ -100,6 +153,11 @@
     padding: 80px 3vw;
     background: #000;
     color: #fff;
+
+    @media (max-width: 576px) {
+      padding: 40px 3vw;
+    }
+
     * {
       font-family: "Playfair Display", serif;
     }
@@ -109,7 +167,12 @@
       font-size: 5rem;
       margin-bottom: 40px;
 
-      &.divider{
+      @media (max-width: 576px) {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      &.divider {
         margin-bottom: 0;
       }
     }
@@ -120,16 +183,29 @@
       justify-content: center;
       gap: 2vw;
 
-      h2{
+      @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      h2 {
         font-size: 5rem;
         text-align: center;
         text-transform: capitalize;
         margin-bottom: 40px;
         line-height: 1.3;
+
+        @media (max-width: 576px) {
+          display: none;
+        }
       }
 
       div {
         flex: 1 1 0;
+
+        @media (max-width: 576px) {
+          flex: 1;
+        }
 
         img {
           width: 100%;

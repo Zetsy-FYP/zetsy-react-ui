@@ -15,6 +15,18 @@
   color: #fff;
   text-transform: uppercase;
 }
+@media (max-width: 576px) {
+  .aboutUs__container .landingBanner {
+    font-size: 5rem;
+  }
+  .aboutUs__container .landingBanner p,
+  .aboutUs__container .landingBanner div {
+    line-height: 1.5;
+  }
+  .aboutUs__container .landingBanner div:nth-child(2) p:last-child {
+    display: none;
+  }
+}
 .aboutUs__container .landingBanner * {
   font-family: "Oswald", serif;
   overflow: hidden;
@@ -27,6 +39,11 @@
   display: flex;
   align-items: center;
   justify-content: right;
+}
+@media (max-width: 576px) {
+  .aboutUs__container .landingBanner div:nth-child(2) {
+    justify-content: left;
+  }
 }
 .aboutUs__container .landingBanner div:nth-child(2) p:last-child {
   font-size: 3.5rem;
@@ -43,11 +60,25 @@
   align-items: flex-start;
   margin: 80px 3vw;
 }
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyIntroduction {
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 3vw;
+    gap: 30px;
+  }
+}
 .aboutUs__container .zetsyIntroduction h1 {
   flex: 2;
   font-size: 3.5rem;
   font-family: "Playfair Display", serif;
   font-weight: 400;
+}
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyIntroduction h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 .aboutUs__container .zetsyIntroduction div {
   flex: 1;
@@ -60,6 +91,13 @@
   border-left: 1px solid #000;
   padding-left: 60px;
 }
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyIntroduction div {
+    border-left: none;
+    padding-left: 0;
+    align-items: center;
+  }
+}
 .aboutUs__container .zetsyIntroduction div h1 {
   font-size: 2.5rem;
   font-weight: 500;
@@ -70,12 +108,24 @@
   font-weight: 300;
   line-height: 1.5;
 }
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyIntroduction div p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
 .aboutUs__container .zetsyImages {
   display: flex;
   align-items: center;
   gap: 2vw;
   justify-content: center;
   margin: 0 3vw;
+}
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyImages {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 .aboutUs__container .zetsyImages img {
   flex: 1 1 0;
@@ -86,12 +136,23 @@
   -o-object-position: center;
      object-position: center;
 }
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyImages img {
+    flex: 1;
+    height: 500px;
+  }
+}
 .aboutUs__container .zetsyCommunity {
   margin: 80px 0;
   margin-bottom: 0;
   padding: 80px 3vw;
   background: #000;
   color: #fff;
+}
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyCommunity {
+    padding: 40px 3vw;
+  }
 }
 .aboutUs__container .zetsyCommunity * {
   font-family: "Playfair Display", serif;
@@ -100,6 +161,12 @@
   text-align: center;
   font-size: 5rem;
   margin-bottom: 40px;
+}
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyCommunity h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
 }
 .aboutUs__container .zetsyCommunity h1.divider {
   margin-bottom: 0;
@@ -110,6 +177,12 @@
   justify-content: center;
   gap: 2vw;
 }
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyCommunity .community {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .aboutUs__container .zetsyCommunity .community h2 {
   font-size: 5rem;
   text-align: center;
@@ -117,8 +190,18 @@
   margin-bottom: 40px;
   line-height: 1.3;
 }
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyCommunity .community h2 {
+    display: none;
+  }
+}
 .aboutUs__container .zetsyCommunity .community div {
   flex: 1 1 0;
+}
+@media (max-width: 576px) {
+  .aboutUs__container .zetsyCommunity .community div {
+    flex: 1;
+  }
 }
 .aboutUs__container .zetsyCommunity .community div img {
   width: 100%;

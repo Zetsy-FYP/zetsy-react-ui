@@ -1,36 +1,68 @@
 import React from "react";
-import NoSsr from "@mui/base/NoSsr";
 
 import styles from "@/styles/navbar.module.css";
 import { Button } from "@mui/material";
 
-export default function Navbar() {
-  // Logo Dynamic Animation
-  const [scrollYLogoTransform, setScrollYLogoTransform] = React.useState(0);
-  const [scrollYLogoMargin, setScrollYLogoMargin] = React.useState(0);
-
+export default function Navbar({ windowWidth }) {
   // search input validation
   const [inputValue, setInputValue] = React.useState("");
 
   const [isMenuCollapsed, setIsMenuCollapsed] = React.useState(false);
 
+  const [dynamicLogo, setDynamicLogo] = React.useState({
+    fontSize: windowWidth > 576 ? "8rem" : "5rem",
+    top: windowWidth > 576 ? "220px" : "143px",
+  });
+
+  React.useEffect(() => {
+    setDynamicLogo({
+      ...dynamicLogo,
+      fontSize: windowWidth > 576 ? "8rem" : "5rem",
+      top: windowWidth > 576 ? "220px" : "143px",
+    });
+  }, [windowWidth]);
+
   const handleMenu = () => {
     setIsMenuCollapsed(!isMenuCollapsed);
     if (!isMenuCollapsed) {
-      setScrollYLogoTransform(148.88);
-      setScrollYLogoMargin(148.88);
+      setDynamicLogo({
+        ...dynamicLogo,
+        scale: 148.88,
+        top: 148.88,
+      });
     } else {
-      setScrollYLogoTransform(window.scrollY);
-      setScrollYLogoMargin(window.scrollY);
+      setDynamicLogo({
+        ...dynamicLogo,
+        scale: window.scrollY,
+        top: window.scrollY,
+      });
     }
   };
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     function handleScroll() {
-      setScrollYLogoTransform(
-        window.scrollY >= 148.88 ? 148.88 : window.scrollY
-      );
-      setScrollYLogoMargin(window.scrollY);
+      setDynamicLogo({
+        ...dynamicLogo,
+        fontSize:
+          windowWidth > 576
+            ? `${
+                8 -
+                ((window.scrollY >= 148.88 ? 148.88 : window.scrollY) * 2.5) /
+                  60
+              }rem`
+            : `${
+                5 -
+                ((window.scrollY >= 148.88 ? 148.88 : window.scrollY) * 2.5) /
+                  120
+              }rem`,
+        top: isMenuCollapsed
+          ? windowWidth > 576
+            ? "80px"
+            : "55px"
+          : windowWidth > 576
+          ? `${window.scrollY >= 140 ? 80 : 80 - (window.scrollY - 140)}px`
+          : `${window.scrollY >= 80 ? 55 : 23 - (window.scrollY - 120)}px`,
+      });
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -100,38 +132,18 @@ export default function Navbar() {
             <i className="ri-shopping-cart-line"></i>
           </Button>
         </div>
-        {!isFocused &&
-          process.browser &&
-          window.scrollY !== 148.88 &&
-          inputValue === "" && (
-            <div className={styles.menu__logo}>
-              <h1
-                style={{
-                  fontSize:
-                    process.browser && window.innerWidth > 576
-                      ? `${8 - (scrollYLogoTransform * 2.5) / 60}rem`
-                      : `${5 - (scrollYLogoTransform * 2.5) / 120}rem`,
-                  top: isMenuCollapsed
-                    ? process.browser && window.innerWidth > 576
-                      ? "80px"
-                      : "55px"
-                    : process.browser && window.innerWidth > 576
-                    ? `${
-                        scrollYLogoMargin >= 140
-                          ? 80
-                          : 80 - (scrollYLogoMargin - 140)
-                      }px`
-                    : `${
-                        scrollYLogoMargin >= 80
-                          ? 55
-                          : 23 - (scrollYLogoMargin - 120)
-                      }px`,
-                }}
-              >
-                Zetsy.
-              </h1>
-            </div>
-          )}
+        {!isFocused && dynamicLogo.top !== 148.88 && inputValue === "" && (
+          <div className={styles.menu__logo}>
+            <h1
+              style={{
+                fontSize: dynamicLogo.fontSize,
+                top: dynamicLogo.top,
+              }}
+            >
+              Zetsy.
+            </h1>
+          </div>
+        )}
 
         {isMenuCollapsed && (
           <div className={styles.menuItems__container}>

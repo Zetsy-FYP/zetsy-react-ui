@@ -1,26 +1,50 @@
-import React from "react";
-
-import styles from "@/styles/navbar.module.css";
+import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 
-export default function Navbar({ windowWidth }) {
+import styles from "@/styles/navbar.module.css";
+
+export default function Navbar() {
   // search input validation
-  const [inputValue, setInputValue] = React.useState("");
+  const [inputValue, setInputValue] = useState("");
 
-  const [isMenuCollapsed, setIsMenuCollapsed] = React.useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+  const [isMenuCollapsed, setIsMenuCollapsed] = useState(false);
 
-  const [dynamicLogo, setDynamicLogo] = React.useState({
-    fontSize: windowWidth > 576 ? "8rem" : "5rem",
-    top: windowWidth > 576 ? "220px" : "143px",
-  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
 
-  React.useEffect(() => {
-    setDynamicLogo({
-      ...dynamicLogo,
-      fontSize: windowWidth > 576 ? "8rem" : "5rem",
-      top: windowWidth > 576 ? "220px" : "143px",
-    });
-  }, [windowWidth]);
+    function handleScroll() {
+      setScrollY(window.scrollY);
+    }
+
+    handleResize();
+    handleScroll();
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const initialLogoStyle = {
+    fontSize:
+      windowWidth > 576
+        ? `${8 - (scrollY >= 148.88 ? 148.88 : scrollY) * 0.04}rem`
+        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`,
+    top: isMenuCollapsed
+      ? windowWidth > 576
+        ? "80px"
+        : "55px"
+      : windowWidth > 576
+      ? `${scrollY >= 140 ? 80 : 80 - (scrollY - 140)}px`
+      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`,
+  };
 
   const handleMenu = () => {
     setIsMenuCollapsed(!isMenuCollapsed);
@@ -39,37 +63,7 @@ export default function Navbar({ windowWidth }) {
     }
   };
 
-  React.useLayoutEffect(() => {
-    function handleScroll() {
-      setDynamicLogo({
-        ...dynamicLogo,
-        fontSize:
-          windowWidth > 576
-            ? `${
-                8 -
-                ((window.scrollY >= 148.88 ? 148.88 : window.scrollY) * 2.5) /
-                  60
-              }rem`
-            : `${
-                5 -
-                ((window.scrollY >= 148.88 ? 148.88 : window.scrollY) * 2.5) /
-                  120
-              }rem`,
-        top: isMenuCollapsed
-          ? windowWidth > 576
-            ? "80px"
-            : "55px"
-          : windowWidth > 576
-          ? `${window.scrollY >= 140 ? 80 : 80 - (window.scrollY - 140)}px`
-          : `${window.scrollY >= 80 ? 55 : 23 - (window.scrollY - 120)}px`,
-      });
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const [isFocused, setIsFocused] = React.useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -130,16 +124,9 @@ export default function Navbar({ windowWidth }) {
             <i className="ri-shopping-cart-line"></i>
           </Button>
         </div>
-        {!isFocused && dynamicLogo.top !== 148.88 && inputValue === "" && (
+        {!isFocused && scrollY !== 148.88 && inputValue === "" && (
           <div className={styles.menu__logo}>
-            <h1
-              style={{
-                fontSize: dynamicLogo.fontSize,
-                top: dynamicLogo.top,
-              }}
-            >
-              Zetsy.
-            </h1>
+            <h1 style={initialLogoStyle}>Zetsy.</h1>
           </div>
         )}
 

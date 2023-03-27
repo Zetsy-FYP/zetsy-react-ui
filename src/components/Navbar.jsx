@@ -82,8 +82,6 @@ export default function Navbar({ windowWidth }) {
   const handleNavigation = (e) => {
     setIsMenuCollapsed(false);
     window.scrollTo(0, 0);
-    setScrollYLogoTransform(window.scrollY);
-    setScrollYLogoMargin(window.scrollY);
     // navigate(e);
   };
 

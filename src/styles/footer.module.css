@@ -1,0 +1,29 @@
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 2vw;
+  font-size: 20px;
+}
+@media (max-width: 576px) {
+  .footer__container {
+    font-size: 18px;
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .footer__container {
+    flex-wrap: wrap;
+  }
+}
+.footer__container * {
+  font-family: "Oswald", serif;
+}
+.footer__container p:first-child {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-size: 26px;
+}
+.footer__container p:last-child {
+  cursor: pointer;
+} /*# sourceMappingURL=style.css.map */

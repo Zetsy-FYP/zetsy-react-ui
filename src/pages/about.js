@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "@/styles/about.module.css";
 import HomeLayout from "@/layouts/HomeLayout";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -65,14 +66,12 @@ export default function About() {
         </div>
 
         <div className={styles.zetsyImages}>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
-            loading="lazy"
             alt=""
           />
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1542546068979-b6affb46ea8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-            loading="lazy"
             alt=""
           />
         </div>
@@ -88,39 +87,34 @@ export default function About() {
           <h1 className={styles.divider}>*</h1>
           <div className={styles.community}>
             <div>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/327268592_853679075707120_7819938780839728950_n.jpg?updatedAt=1679246534521"
-                loading="lazy"
                 alt=""
               />
               <p>Sudeep Mishra</p>
               <span>Platform Wizard</span>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878"
-                loading="lazy"
                 alt=""
               />
               <p>Suraj Gaire</p>
               <span>Theme Wizard</span>
             </div>
             <div>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576"
-                loading="lazy"
                 alt=""
               />
               <p>Nirdesh Acharya Dixit</p>
               <span>Growth Hacker</span>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-46-12.png?updatedAt=1679248895986"
-                loading="lazy"
                 alt=""
               />
               <p>Jessica Singh Shresth</p>
               <span>Finance Manager</span>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-22_22-01-54.png?updatedAt=1679501928957"
-                loading="lazy"
                 alt=""
               />
               <p>Bibek Angdembe</p>
@@ -129,9 +123,8 @@ export default function About() {
             <div>
               <h2>We care about our people</h2>
               <div>
-                <img
+                <Image
                   src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-05-03.png?updatedAt=1679246413143"
-                  loading="lazy"
                   alt=""
                 />
                 <p>Laxman Rai</p>
@@ -139,39 +132,34 @@ export default function About() {
               </div>
             </div>
             <div>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-21_00-32-41.png?updatedAt=1679338073104"
-                loading="lazy"
                 alt=""
               />
               <p>Shishir Shrestha</p>
               <span>PR Manager</span>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-21_00-31-19.png?updatedAt=1679338000530"
-                loading="lazy"
                 alt=""
               />
               <p>Anmol Bhattarai</p>
               <span>Finance Manager</span>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-21_00-34-35.png?updatedAt=1679338187686"
-                loading="lazy"
                 alt=""
               />
               <p>Hritik Bhandari</p>
               <span>Human Resource</span>
             </div>
             <div>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-21_00-37-49.png?updatedAt=1679338382169"
-                loading="lazy"
                 alt=""
               />
               <p>Sarbendra Sigdel</p>
               <span>Marketing Guru</span>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-21_00-39-22.png?updatedAt=1679338474403"
-                loading="lazy"
                 alt=""
               />
               <p>Reewaz Neupane</p>

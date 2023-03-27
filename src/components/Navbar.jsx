@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
+import { useRouter } from "next/router";
 
 import styles from "@/styles/navbar.module.css";
 
 export default function Navbar() {
+  const router = useRouter();
+
   // search input validation
   const [inputValue, setInputValue] = useState("");
 
   const [windowWidth, setWindowWidth] = useState(0);
   const [scrollY, setScrollY] = useState(0);
-  const [isMenuCollapsed, setIsMenuCollapsed] = useState(false);
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   useEffect(() => {
     function handleResize() {
@@ -33,33 +36,28 @@ export default function Navbar() {
   }, []);
 
   const initialLogoStyle = {
-    fontSize:
-      windowWidth > 576
+    fontSize: !isMenuOpened
+      ? (windowWidth > 576
         ? `${8 - (scrollY >= 148.88 ? 148.88 : scrollY) * 0.04}rem`
-        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`,
-    top: isMenuCollapsed
-      ? windowWidth > 576
+        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`)
+      : (windowWidth > 576
+      ? `${8 - 148.88 * 0.04}rem`
+      : `${5 - 2.5 * 0.0125}rem`),
+    top: isMenuOpened
+      ?( windowWidth > 576
         ? "80px"
-        : "55px"
-      : windowWidth > 576
+        : "55px")
+      : (windowWidth > 576
       ? `${scrollY >= 140 ? 80 : 80 - (scrollY - 140)}px`
-      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`,
+      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`),
   };
 
   const handleMenu = () => {
-    setIsMenuCollapsed(!isMenuCollapsed);
-    if (!isMenuCollapsed) {
-      setDynamicLogo({
-        ...dynamicLogo,
-        scale: 148.88,
-        top: 148.88,
-      });
+    setIsMenuOpened(!isMenuOpened);
+    if (!isMenuOpened) {
+      setScrollY(148.88);
     } else {
-      setDynamicLogo({
-        ...dynamicLogo,
-        scale: window.scrollY,
-        top: window.scrollY,
-      });
+      setScrollY(window.scrollY);
     }
   };
 
@@ -74,9 +72,9 @@ export default function Navbar() {
   };
 
   const handleNavigation = (e) => {
-    setIsMenuCollapsed(false);
+    setIsMenuOpened(false);
     window.scrollTo(0, 0);
-    // navigate(e);
+    router.push(e);
   };
 
   return (
@@ -98,7 +96,7 @@ export default function Navbar() {
       <div className={styles.menu__container}>
         <div className={styles.menuItems}>
           <Button className={styles.borderRight} onClick={() => handleMenu()}>
-            {isMenuCollapsed ? (
+            {isMenuOpened ? (
               <i className="ri-close-fill"></i>
             ) : (
               <i className="ri-menu-line"></i>
@@ -126,21 +124,23 @@ export default function Navbar() {
         </div>
         {!isFocused && scrollY !== 148.88 && inputValue === "" && (
           <div className={styles.menu__logo}>
-            <h1 style={initialLogoStyle}>Zetsy.</h1>
+            <h1 style={initialLogoStyle} onClick={() => handleNavigation("/")}>
+              Zetsy.
+            </h1>
           </div>
         )}
 
-        {isMenuCollapsed && (
+        {isMenuOpened && (
           <div className={styles.menuItems__container}>
-            <Button onClick={() => handleNavigation("themes")}>
+            <Button onClick={() => handleNavigation("/themes")}>
               Themes: Your Taste
             </Button>
 
-            <Button onClick={() => handleNavigation("about")}>About Us</Button>
+            <Button onClick={() => handleNavigation("/about")}>About Us</Button>
 
             <Button>Marketplace</Button>
 
-            <Button onClick={() => handleNavigation("auth")}>
+            <Button onClick={() => handleNavigation("/auth")}>
               Sign In / Register
             </Button>
 

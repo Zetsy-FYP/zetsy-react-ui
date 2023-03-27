@@ -7,6 +7,7 @@ import SpringR from "@/assets/spring-r.png";
 
 import HomeLayout from "@/layouts/HomeLayout";
 import styles from "@/styles/index.module.css";
+import Image from "next/image";
 
 export default function index() {
   return (
@@ -64,10 +65,9 @@ export default function index() {
           <div className={styles.services__container}>
             <div className={styles.service}>
               <div className={styles.image__container}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1541506618330-7c369fc759b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
                   alt=""
-                  loading="lazy"
                 />
               </div>
               <span>Design</span>
@@ -79,10 +79,9 @@ export default function index() {
             </div>
             <div className={styles.service}>
               <div className={styles.image__container}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1495&q=80"
                   alt=""
-                  loading="lazy"
                 />
               </div>
               <span>Community</span>
@@ -94,10 +93,9 @@ export default function index() {
             </div>
             <div className={styles.service}>
               <div className={styles.image__container}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1593672715438-d88a70629abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                   alt=""
-                  loading="lazy"
                 />
               </div>
               <span>Finance</span>
@@ -109,10 +107,9 @@ export default function index() {
             </div>
             <div className={styles.service}>
               <div className={styles.image__container}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                   alt=""
-                  loading="lazy"
                 />
               </div>
               <span>Analytics</span>
@@ -123,10 +120,9 @@ export default function index() {
             </div>
             <div className={styles.service}>
               <div className={styles.image__container}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1603015269169-225cb700e29a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                   alt=""
-                  loading="lazy"
                 />
               </div>
               <span>Integration</span>
@@ -138,10 +134,9 @@ export default function index() {
             </div>
             <div className={styles.service}>
               <div className={styles.image__container}>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                   alt=""
-                  loading="lazy"
                 />
               </div>
               <span>Streamlined</span>
@@ -218,9 +213,8 @@ export default function index() {
                 Management and Online Presence is timely and expensive – we'll
                 help with both.
               </h1>
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-                loading="lazy"
                 alt=""
               />
             </div>
@@ -232,10 +226,9 @@ export default function index() {
                     Customisable, and clear options you can manage yourself.
                     Streamline your back office.
                   </p>
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1412&q=80"
                     alt=""
-                    loading="lazy"
                   />
                 </div>
                 <div>
@@ -244,20 +237,18 @@ export default function index() {
                     Scale effortlessly, with domestic and international
                     benefits. Sell to every buyer, everywhere.
                   </p>
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                     alt=""
-                    loading="lazy"
                   />
                 </div>
               </div>
               <div className={styles.freelancers}>
                 <h1>Startups</h1>
                 <p>An easy gateway to cover your team. Your store, your way.</p>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                   alt=""
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -266,7 +257,7 @@ export default function index() {
 
         <div className={styles.landing__subscribeBusiness}>
           <div className={styles.title}>
-            <img src={Spring} loading="lazy" alt="" />
+            <Image src={Spring} alt="" />
             <div>
               <h1>Grow your business with us.</h1>
               <p>
@@ -277,7 +268,7 @@ export default function index() {
               </p>
               <Button>Register Your Business</Button>
             </div>
-            <img src={SpringR} loading="lazy" alt="" />
+            <Image src={SpringR} alt="" />
           </div>
         </div>
 
@@ -293,9 +284,8 @@ export default function index() {
 
           <div className={styles.teamItems}>
             <div className={styles.team}>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-05-03.png?updatedAt=1679246413143"
-                loading="lazy"
                 alt=""
               />
               <span>Laxman Rai (Lex)</span>
@@ -313,9 +303,8 @@ export default function index() {
               </div>
             </div>
             <div className={styles.team}>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/327268592_853679075707120_7819938780839728950_n.jpg?updatedAt=1679246534521"
-                loading="lazy"
                 alt=""
               />
               <span>Sudeep Mishra (SoDeep)</span>
@@ -333,9 +322,8 @@ export default function index() {
               </div>
             </div>
             <div className={styles.team}>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878"
-                loading="lazy"
                 alt=""
               />
               <span>Suraj Gaire (Gaire)</span>
@@ -353,9 +341,8 @@ export default function index() {
               </div>
             </div>
             <div className={styles.team}>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-46-12.png?updatedAt=1679248895986"
-                loading="lazy"
                 alt=""
               />
               <span>Jessica Singh Shrestha (Jess)</span>
@@ -373,9 +360,8 @@ export default function index() {
               </div>
             </div>
             <div className={styles.team}>
-              <img
+              <Image
                 src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576"
-                loading="lazy"
                 alt=""
               />
               <span>Nirdesh Acharya Dixit (Neil)</span>

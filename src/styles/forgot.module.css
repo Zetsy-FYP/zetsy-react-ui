@@ -1,0 +1,82 @@
+.forgotPassword__container {
+    margin-top: 250px;
+    max-width: 100vw;
+    border-bottom: 1px solid #000;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (max-width: 576px) {
+    .forgotPassword__container {
+      margin-top: 150px;
+    }
+  }
+  .forgotPassword__container .utilities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+  .forgotPassword__container .utilities.mg_bttm_forgot {
+    margin-bottom: 80px;
+  }
+  .forgotPassword__container .utilities p:last-child {
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .forgotPassword__container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  .forgotPassword__container form .utilities {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+  @media (max-width: 576px) {
+    .forgotPassword__container form .utilities {
+      flex-direction: column;
+      gap: 5px;
+      font-size: 19px;
+    }
+  }
+  .forgotPassword__container form .utilities p:last-child {
+    color: #000;
+    font-weight: 600;
+  }
+  .forgotPassword__container form input {
+    font-family: "Oswald", serif;
+    font-size: 22px;
+    min-width: 25vw;
+    padding: 10px 8px;
+    background: transparent;
+  }
+  @media (max-width: 576px) {
+    .forgotPassword__container form input {
+      min-width: 89vw;
+      font-size: 18px;
+    }
+  }
+  .forgotPassword__container form .authForm__button {
+    font-family: "Oswald", serif;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    font-size: 19px;
+    padding: 15px 0;
+  }
+  @media (max-width: 576px) {
+    .forgotPassword__container form .authForm__button {
+      font-size: 18px;
+    }
+  }/*# sourceMappingURL=style.css.map */

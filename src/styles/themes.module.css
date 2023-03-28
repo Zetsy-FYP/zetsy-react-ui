@@ -23,6 +23,14 @@
     padding: 10px 20px;
     background: transparent;
   }
+
+  @media (max-width: 576px){
+    .themes__container .searchThemes__container input {
+        width: 90vw;
+        font-size: 18px;
+        padding: 5px 10px;
+      }
+  }
   .themes__container .themesItems {
     display: flex;
     align-items: center;

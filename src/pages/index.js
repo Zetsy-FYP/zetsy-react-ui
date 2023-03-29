@@ -8,6 +8,17 @@ import SpringR from "@/assets/spring-r.png";
 import HomeLayout from "@/layouts/HomeLayout";
 import styles from "@/styles/index.module.css";
 
+export async function getServerSideProps(context){
+  return {
+    props: {
+      title:"Zetsy | The ultimate destination for online presence",
+      description: "Zetsy is a platform designed to bring together the best of ecommerce and business, with a focus on personalized experiences and unique products.",
+      canonical:`https://zetsy.store/`,
+      ogImage: "/zetsy_logo_bw.png"
+    },
+  };
+}
+
 export default function index() {
   return (
     <HomeLayout>

@@ -40,25 +40,13 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta property="og:url" content={pageProps?.ogUrl} />
-        <meta
-          name="twitter:image"
-          content={pageProps?.ogImage}
-        />
+        <meta name="twitter:image" content={pageProps?.ogImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={pageProps?.title}
-        />
-        <meta
-          name="twitter:description"
-          content={pageProps?.description}
-        />
+        <meta name="twitter:title" content={pageProps?.title} />
+        <meta name="twitter:description" content={pageProps?.description} />
         <meta name="twitter:site" content="@zetsy_store" />
         <meta name="twitter:creator" content="@zetsy_store" />
-        <meta
-          name="twitter:image:alt"
-          content={pageProps?.title}
-        />
+        <meta name="twitter:image:alt" content={pageProps?.title} />
         <meta name="msapplication-TileColor" content="#1E69FF" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#000000" />

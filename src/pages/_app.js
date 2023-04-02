@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:image:height" content="585" />
         <meta property="og:image:alt" content="explicitly provided" />
         <meta property="og:image:type" content="image/jpeg" />
+        <meta name="google-site-verification" content="EICBeVat_galmLItuV75cvY2ZtieEfbykxrzh4dpreU" />
         <link
           rel="icon"
           type="image/png"

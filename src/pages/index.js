@@ -366,26 +366,6 @@ export default function index() {
             <div className={styles.team}>
               <img
                 loading="lazy"
-                src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-46-12.png?updatedAt=1679248895986"
-                alt=""
-              />
-              <span>Jessica Singh Shrestha (Jess)</span>
-              <span className={styles.post}>Finance Manager</span>
-              <div className={styles.socialMedias}>
-                <div>
-                  <i className="ri-facebook-line"></i>
-                </div>
-                <div>
-                  <i className="ri-twitter-line"></i>
-                </div>
-                <div>
-                  <i className="ri-linkedin-line"></i>
-                </div>
-              </div>
-            </div>
-            <div className={styles.team}>
-              <img
-                loading="lazy"
                 src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576"
                 alt=""
               />

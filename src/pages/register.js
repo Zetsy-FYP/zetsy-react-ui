@@ -4,12 +4,14 @@ import React, { useState } from "react";
 import styles from "@/styles/auth.module.css";
 import HomeLayout from "@/layouts/HomeLayout";
 import { useRouter } from "next/router";
-import { userSignIn } from "@/utils/authentication";
+import { userSignUp } from "@/utils/authentication";
 import { toast } from "react-toastify";
 
-export default function Authentication() {
+export default function UserRegistration() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [confirmPassword, setConfirmPassword] = useState();
+
   const router = useRouter();
 
   const handleNavigation = (e) => {
@@ -17,11 +19,15 @@ export default function Authentication() {
     router.push(e);
   };
 
-  const handleLogin = async (e) => {
+  const handleUserRegistration = async (e) => {
     try {
       e.preventDefault();
-      await userSignIn(email, password);
-      toast("Login Successful!")
+      if (password === confirmPassword && email) {
+        await userSignUp(email, password);
+        toast("User Registration Completed!");
+      } else {
+        toast.error("Password must match!");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -45,15 +51,18 @@ export default function Authentication() {
             placeholder="Password"
           />
 
-          <div className={styles.utilities}>
-            <p>Must be 8 characters at least.</p>
-            <p onClick={() => handleNavigation("/forgot")}>Forgot Password?</p>
-          </div>
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm Password"
+          />
+
           <Button
-            onClick={(e) => handleLogin(e)}
+            onClick={(e) => handleUserRegistration(e)}
             className={styles.authForm__button}
           >
-            Login
+            Sign Up
           </Button>
         </form>
         <div className={styles.divider}>
@@ -66,9 +75,10 @@ export default function Authentication() {
             <i className="ri-google-fill"></i>
           </Button>
         </div>
-        <div className={`${styles.utilities} ${styles.mg_bttm}`}>
-          <p>Don't have an account?</p>
-          <p onClick={() => handleNavigation("/register")}>Create Account</p>
+
+        <div className={`${styles.utilities} ${styles.mg_bttm_signup}`}>
+          <p>Already have an account?</p>
+          <p onClick={() => handleNavigation("/auth")}>Login</p>
         </div>
       </div>
     </HomeLayout>

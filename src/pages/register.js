@@ -6,11 +6,17 @@ import HomeLayout from "@/layouts/HomeLayout";
 import { useRouter } from "next/router";
 import { userSignUp } from "@/utils/authentication";
 import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
 
 export default function UserRegistration() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [confirmPassword, setConfirmPassword] = useState();
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+  } = useForm();
+  console.log(errors);
 
   const router = useRouter();
 
@@ -19,47 +25,47 @@ export default function UserRegistration() {
     router.push(e);
   };
 
-  const handleUserRegistration = async (e) => {
+  const handleUserRegistration = async (data) => {
     try {
-      e.preventDefault();
-      if (password === confirmPassword && email) {
-        await userSignUp(email, password);
+      console.log(data)
+        await userSignUp(data.email,data.password)
         toast("User Registration Completed!");
-      } else {
+      } catch (error) {
+        console.log(error);
         toast.error("Password must match!");
-      }
-    } catch (error) {
-      console.log(error);
     }
   };
 
   return (
     <HomeLayout>
       <div className={styles.authentication__controller}>
-        <form>
+        <form onClick={handleSubmit(handleUserRegistration)}>
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            {...register("email", { required: "Email is required" })}
             placeholder="Email"
           />
 
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            {...register("password",{required:"password is required"})}
             placeholder="Password"
           />
 
           <input
             type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            {...register("confirmPassword", {
+              required: "Password is required",
+              validate: (value) => {
+                if (watch("password") !== value) {
+                  return "Password does not match";
+                }
+              },
+            })}
             placeholder="Confirm Password"
           />
 
           <Button
-            onClick={(e) => handleUserRegistration(e)}
             className={styles.authForm__button}
           >
             Sign Up

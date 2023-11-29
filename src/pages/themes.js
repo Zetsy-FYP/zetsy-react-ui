@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ThemeCard from "@/components/ThemeCard";
 import styles from "@/styles/themes.module.css";
 import HomeLayout from "@/layouts/HomeLayout";
+import ThemesMock from "@/mocks/Themes.json";
 
 export default function Themes() {
+  const [searchWord, setSearchWord] = useState("");
+  const [filteredList, setFilteredLists] = useState(ThemesMock);
+
+  const handleFilteredList = (e) => {
+    setSearchWord(e);
+    const filteredItems = ThemesMock.filter((theme) =>
+      theme.themeTitle.toLowerCase().includes(e.toLowerCase())
+    );
+    setFilteredLists(filteredItems);
+  };
   return (
     <HomeLayout>
       <div className={styles.themes__container}>
@@ -12,11 +23,13 @@ export default function Themes() {
           <input
             type="text"
             placeholder="Search Essence, Categories, Ingrediants for your awesome Brand..."
+            value={searchWord}
+            onChange={(e) => handleFilteredList(e.target.value)}
           />
         </div>
         <div className={styles.themesItems}>
-          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => {
-            return <ThemeCard key={i} />;
+          {filteredList.map((item, i) => {
+            return <ThemeCard item={item} key={i} />;
           })}
         </div>
       </div>

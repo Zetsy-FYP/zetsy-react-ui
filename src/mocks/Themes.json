@@ -1,0 +1,30 @@
+[
+  {
+    "themeBackgroundImage": "https://ik.imagekit.io/13x54r/Zetsy/Screenshot%202023-11-29%20085033.png?updatedAt=1701265855755",
+    "themeDescription": "Clothing store theme consists of payment system, product inventory management crafted for the outfit industry.",
+    "themeTitle": "WeOutfit",
+    "themeCategories": ["clothing", "outfit"],
+    "themeHref": "https://www.zara.com/"
+  },
+  {
+    "themeBackgroundImage": "https://ik.imagekit.io/13x54r/Zetsy/Screenshot%202023-11-29%20085352.png?updatedAt=1701266045415",
+    "themeDescription": "Galleria let's you sell your perspective. Galleria respects visual art.",
+    "themeTitle": "Galleria",
+    "themeCategories": ["images", "gallery", "art"],
+    "themeHref": "https://unsplash.com/"
+  },
+  {
+    "themeBackgroundImage": "https://ik.imagekit.io/13x54r/Zetsy/Screenshot%202023-11-29%20085534.png?updatedAt=1701266150092",
+    "themeDescription": "Foodie theme consists a complete solution for our users to share their delicious food to their customers. Bon apetit.",
+    "themeTitle": "Foodie",
+    "themeCategories": ["food", "taste"],
+    "themeHref": "https://www.ubereats.com/"
+  },
+  {
+    "themeBackgroundImage": "https://ik.imagekit.io/13x54r/Zetsy/Screenshot%202023-11-29%20091049.png?updatedAt=1701267061577",
+    "themeDescription": "Sell sneakers, let people walk comfortable on every occasions.",
+    "themeTitle": "SneakerHead",
+    "themeCategories": ["sneakers", "shoes"],
+    "themeHref": "https://www.adidas.ca/en"
+  }
+]

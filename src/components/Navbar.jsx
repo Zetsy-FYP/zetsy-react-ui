@@ -37,19 +37,19 @@ export default function Navbar() {
 
   const initialLogoStyle = {
     fontSize: !isMenuOpened
-      ? (windowWidth > 576
+      ? windowWidth > 576
         ? `${8 - (scrollY >= 148.88 ? 148.88 : scrollY) * 0.04}rem`
-        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`)
-      : (windowWidth > 576
+        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`
+      : windowWidth > 576
       ? `${8 - 148.88 * 0.04}rem`
-      : `${5 - 2.5 * 0.0125}rem`),
+      : `${5 - 2.5 * 0.0125}rem`,
     top: isMenuOpened
-      ?( windowWidth > 576
+      ? windowWidth > 576
         ? "80px"
-        : "55px")
-      : (windowWidth > 576
+        : "55px"
+      : windowWidth > 576
       ? `${scrollY >= 140 ? 80 : 80 - (scrollY - 140)}px`
-      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`),
+      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`,
   };
 
   const handleMenu = () => {
@@ -138,19 +138,19 @@ export default function Navbar() {
 
             <Button onClick={() => handleNavigation("/about")}>About Us</Button>
 
-            <Button>Marketplace</Button>
+            {/* <Button>Marketplace</Button> */}
 
             <Button onClick={() => handleNavigation("/auth")}>
               Sign In / Register
             </Button>
 
-            <p>Careers</p>
-            <p>Roadmap</p>
-            <p>Highlighted Projects</p>
-            <p>FAQs</p>
-            <p>Contact</p>
+            {/* <p>Careers</p> */}
+            {/* <p>Roadmap</p> */}
+            {/* <p>Highlighted Projects</p> */}
+            {/* <p>FAQs</p> */}
+            {/* <p>Contact</p> */}
 
-            <div className={styles.utilities}>
+            {/* <div className={styles.utilities}>
               <div className={styles.firstChild}>
                 <div className={styles.darkMode__container}>
                   <div className={styles.circle}></div>
@@ -161,7 +161,7 @@ export default function Navbar() {
                 <i className="ri-settings-4-line"></i>
                 <p>Settings</p>
               </div>
-            </div>
+            </div> */}
 
             <div className={styles.socialMedias}>
               <li>

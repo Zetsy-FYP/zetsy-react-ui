@@ -3,6 +3,7 @@ import React from "react";
 import ThemeCard from "@/components/ThemeCard";
 import styles from "@/styles/themes.module.css";
 import HomeLayout from "@/layouts/HomeLayout";
+import ThemesMock from "@/mocks/Themes.json"
 
 export default function Themes() {
   return (
@@ -15,8 +16,8 @@ export default function Themes() {
           />
         </div>
         <div className={styles.themesItems}>
-          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => {
-            return <ThemeCard key={i} />;
+          {ThemesMock.map((item, i) => {
+            return <ThemeCard item={item} key={i} />;
           })}
         </div>
       </div>

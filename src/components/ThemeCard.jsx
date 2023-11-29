@@ -2,23 +2,21 @@ import React from "react";
 
 import styles from "@/styles/themecard.module.css";
 
-export default function ThemeCard() {
+export default function ThemeCard({ item }) {
   return (
     <div className={styles.themeCard__container}>
       <div className={styles.img__container}>
-      <img
-        src="https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/02/63efa61e5395a543322595.png"
-        loading="lazy"
-        alt=""
-      />
+        <img src={item.themeBackgroundImage} loading="lazy" alt="" />
       </div>
       <div className={styles.description}>
-        <h2 className={styles.name}>Active Theory</h2>
+        <h2 className={styles.name}>{item.themeTitle}</h2>
         <div className={styles.category}>
-          <div>Fashion</div>
-          <div>Shoes</div>
+          {item.themeCategories.map((category, i) => (
+            <div>{category}</div>
+          ))}
         </div>
       </div>
+      <p style={{marginTop: "10px"}}>{item.themeDescription}</p>
     </div>
   );
 }

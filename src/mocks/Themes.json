@@ -1,0 +1,20 @@
+[
+    {
+        "themeBackgroundImage": "https://ik.imagekit.io/13x54r/Zetsy/Screenshot%202023-11-29%20085033.png?updatedAt=1701265855755",
+        "themeDescription": "Clothing store theme consists of payment system, product inventory management crafted for the outfit industry.",
+        "themeTitle": "WeOutfit",
+        "themeCategories": ["clothing", "outfit"]
+    },
+    {
+        "themeBackgroundImage": "https://ik.imagekit.io/13x54r/Zetsy/Screenshot%202023-11-29%20085352.png?updatedAt=1701266045415",
+        "themeDescription": "Galleria let's you sell your perspective. Galleria respects visual art.",
+        "themeTitle": "Galleria",
+        "themeCategories": ["images", "gallery", "art"]
+    },
+    {
+        "themeBackgroundImage": "https://ik.imagekit.io/13x54r/Zetsy/Screenshot%202023-11-29%20085534.png?updatedAt=1701266150092",
+        "themeDescription": "Foodie theme consists a complete solution for our users to share their delicious food to their customers. Bon apetit.",
+        "themeTitle": "Foodie",
+        "themeCategories": ["food", "taste"]
+    }
+]

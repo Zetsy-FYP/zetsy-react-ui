@@ -11,6 +11,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../../firebase";
+// import toast from "react-toastify";
 
 /**
  * Authentication
@@ -24,11 +25,13 @@ export const userSignIn = (email, password) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
+      console.log(user);
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      toast(errorCode);
+      console.log(errorMessage);
+      // toast(errorCode);
     });
 };
 
@@ -58,6 +61,7 @@ export const googleSignIn = () => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       const user = result.user;
+      console.log(user);
     })
     .catch((error) => {
       // Handle Errors here.
@@ -93,6 +97,7 @@ export const userSignUp = (email, password) => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      console.log(errorMessage);
       // ..
     });
 };

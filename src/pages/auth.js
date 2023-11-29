@@ -1,27 +1,27 @@
 import { Button } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "@/styles/auth.module.css";
 import HomeLayout from "@/layouts/HomeLayout";
 import { useRouter } from "next/router";
-import { userSignIn } from "@/utils/authentication";
+import { userSignIn , googleSignIn } from "@/utils/authentication";
 import { toast } from "react-toastify";
+import { useForm } from "react-hook-form"
 
 export default function Authentication() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
   const router = useRouter();
+  const { register , handleSubmit ,formState:{errors} } = useForm()
 
   const handleNavigation = (e) => {
     window.scrollTo(0, 0);
     router.push(e);
   };
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (data) => {
     try {
-      e.preventDefault();
-      await userSignIn(email, password);
+      await userSignIn(data.email, data.password);
       toast("Login Successful!")
+      router.push("/")
     } catch (error) {
       console.log(error);
     }
@@ -30,18 +30,20 @@ export default function Authentication() {
   return (
     <HomeLayout>
       <div className={styles.authentication__controller}>
-        <form>
+        <form onClick={handleSubmit(handleLogin)}>
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            // value={email}
+            // onChange={(e) => setEmail(e.target.value)}
+            {...register("email",{required:"Email is required"})}
             placeholder="Email"
           />
 
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            // value={password}
+            // onChange={(e) => setPassword(e.target.value)}
+            {...register("password",{required:"Password is required"})}
             placeholder="Password"
           />
 
@@ -50,7 +52,7 @@ export default function Authentication() {
             <p onClick={() => handleNavigation("/forgot")}>Forgot Password?</p>
           </div>
           <Button
-            onClick={(e) => handleLogin(e)}
+            // onClick={(e) => handleLogin(e)}
             className={styles.authForm__button}
           >
             Login
@@ -62,7 +64,7 @@ export default function Authentication() {
           <div></div>
         </div>
         <div className={styles.socialAuthentications}>
-          <Button>
+          <Button onClick={googleSignIn} >
             <i className="ri-google-fill"></i>
           </Button>
         </div>

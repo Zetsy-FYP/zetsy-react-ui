@@ -1,11 +1,10 @@
 import React from "react";
 
 import styles from "@/styles/about.module.css";
-import HomeLayout from "@/layouts/HomeLayout";
 
 export default function About() {
   return (
-    <HomeLayout>
+    <>
       <div className={styles.aboutUs__container}>
         <div className={styles.landingBanner}>
           <div>A believer</div>
@@ -180,6 +179,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </HomeLayout>
+    </>
   );
 }

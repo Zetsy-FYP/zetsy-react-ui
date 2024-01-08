@@ -1,15 +1,14 @@
+"use client";
 import { Button } from "@mui/material";
 import React, { useState } from "react";
 
 import styles from "@/styles/auth.module.css";
-import HomeLayout from "@/layouts/HomeLayout";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { userSignUp } from "@/utils/authentication";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 
 export default function UserRegistration() {
-  
   const {
     register,
     handleSubmit,
@@ -27,17 +26,17 @@ export default function UserRegistration() {
 
   const handleUserRegistration = async (data) => {
     try {
-      console.log(data)
-        await userSignUp(data.email,data.password)
-        toast("User Registration Completed!");
-      } catch (error) {
-        console.log(error);
-        toast.error("Password must match!");
+      console.log(data);
+      await userSignUp(data.email, data.password);
+      toast("User Registration Completed!");
+    } catch (error) {
+      console.log(error);
+      toast.error("Password must match!");
     }
   };
 
   return (
-    <HomeLayout>
+    <>
       <div className={styles.authentication__controller}>
         <form onClick={handleSubmit(handleUserRegistration)}>
           <input
@@ -48,7 +47,7 @@ export default function UserRegistration() {
 
           <input
             type="password"
-            {...register("password",{required:"password is required"})}
+            {...register("password", { required: "password is required" })}
             placeholder="Password"
           />
 
@@ -65,11 +64,7 @@ export default function UserRegistration() {
             placeholder="Confirm Password"
           />
 
-          <Button
-            className={styles.authForm__button}
-          >
-            Sign Up
-          </Button>
+          <Button className={styles.authForm__button}>Sign Up</Button>
         </form>
         <div className={styles.divider}>
           <div></div>
@@ -87,6 +82,6 @@ export default function UserRegistration() {
           <p onClick={() => handleNavigation("/auth")}>Login</p>
         </div>
       </div>
-    </HomeLayout>
+    </>
   );
 }

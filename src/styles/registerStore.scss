@@ -1,0 +1,35 @@
+input {
+  border: 2px solid #000;
+  &:active {
+    outline: none;
+  }
+}
+
+.submitBtn {
+  p {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: opacity transform 0.5 linear;
+  }
+
+  &:hover {
+    p {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.createAccBtn {
+  background-color: black;
+  color: white;
+  &:disabled {
+    background-color: rgba(128, 128, 128, 0.448);
+  }
+}
+
+.css-1be5mm1-MuiLinearProgress-root-MuiMobileStepper-progress {
+  width: 100%;
+}

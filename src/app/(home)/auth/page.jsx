@@ -1,9 +1,9 @@
+"use client";
 import { Button } from "@mui/material";
 import React from "react";
 
 import styles from "@/styles/auth.module.css";
-import HomeLayout from "@/layouts/HomeLayout";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { userSignIn , googleSignIn } from "@/utils/authentication";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form"
@@ -28,7 +28,7 @@ export default function Authentication() {
   };
 
   return (
-    <HomeLayout>
+    <>
       <div className={styles.authentication__controller}>
         <form onClick={handleSubmit(handleLogin)}>
           <input
@@ -73,6 +73,6 @@ export default function Authentication() {
           <p onClick={() => handleNavigation("/register")}>Create Account</p>
         </div>
       </div>
-    </HomeLayout>
+    </>
   );
 }

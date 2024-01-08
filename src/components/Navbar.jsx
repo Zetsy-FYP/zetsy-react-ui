@@ -1,6 +1,7 @@
+"use client";
 import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 import styles from "@/styles/navbar.module.css";
 
@@ -37,19 +38,19 @@ export default function Navbar() {
 
   const initialLogoStyle = {
     fontSize: !isMenuOpened
-      ? (windowWidth > 576
+      ? windowWidth > 576
         ? `${8 - (scrollY >= 148.88 ? 148.88 : scrollY) * 0.04}rem`
-        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`)
-      : (windowWidth > 576
+        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`
+      : windowWidth > 576
       ? `${8 - 148.88 * 0.04}rem`
-      : `${5 - 2.5 * 0.0125}rem`),
+      : `${5 - 2.5 * 0.0125}rem`,
     top: isMenuOpened
-      ?( windowWidth > 576
+      ? windowWidth > 576
         ? "80px"
-        : "55px")
-      : (windowWidth > 576
+        : "55px"
+      : windowWidth > 576
       ? `${scrollY >= 140 ? 80 : 80 - (scrollY - 140)}px`
-      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`),
+      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`,
   };
 
   const handleMenu = () => {

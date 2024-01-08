@@ -1,9 +1,9 @@
+"use client";
 import { Button } from "@mui/material";
 import React, { useState } from "react";
 
 import styles from "@/styles/auth.module.css";
-import HomeLayout from "@/layouts/HomeLayout";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { sendUserPasswordResetEmail } from "@/utils/authentication";
 
@@ -27,7 +27,7 @@ export default function Authentication() {
   };
 
   return (
-    <HomeLayout>
+    <>
       <div className={styles.authentication__controller}>
         <form>
           <input
@@ -60,6 +60,6 @@ export default function Authentication() {
           </p>
         </div>
       </div>
-    </HomeLayout>
+    </>
   );
 }

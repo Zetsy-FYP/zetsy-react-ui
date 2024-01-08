@@ -1,27 +1,30 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
-import { Button } from "@mui/material";
 
 import Spring from "@/assets/spring.png";
 import SpringR from "@/assets/spring-r.png";
 
-import HomeLayout from "@/layouts/HomeLayout";
 import styles from "@/styles/index.module.css";
+import Link from "next/link";
+import MarqueeComponent from "@/components/Marquee";
 
-export async function getServerSideProps(context){
-  return {
-    props: {
-      title:"Zetsy | The ultimate destination for online presence",
-      description: "Zetsy is a platform designed to bring together the best of ecommerce and business, with a focus on personalized experiences and unique products.",
-      canonical:`https://zetsy.store/`,
-      ogImage: "/zetsy_logo_bw.png"
-    },
-  };
-}
+export const metadata = {
+  title: "Zetsy | The ultimate destination for online presence",
+  description:
+    "Zetsy is a platform designed to bring together the best of ecommerce and business, with a focus on personalized experiences and unique products.",
+  canonical: `https://zetsy.store/`,
+  ogImage: "/zetsy_logo_bw.png",
+  openGraph: {
+    title: "Zetsy | The ultimate destination for online presence",
+    description:
+      "Zetsy is a platform designed to bring together the best of ecommerce and business, with a focus on personalized experiences and unique products.",
+    url: "https://zetsy.store",
+    siteName: "Zetsy Store",
+  },
+};
 
-export default function index() {
+export default function page() {
   return (
-    <HomeLayout>
+    <>
       <div className={styles.landing__container}>
         <video
           src="/landing.mp4"
@@ -65,7 +68,12 @@ export default function index() {
           </p>
 
           <div className={styles.joinZetsy}>
-            <p>let's zetsy started!</p> <i className="ri-arrow-right-line"></i>
+            {/* <button className=" px-1 underline"> */}
+            <Link href={"register-store"} className=" px-1 underline">
+              let's zetsy started!
+            </Link>
+            {/* </button>{" "} */}
+            <i className="ri-arrow-right-line"></i>
           </div>
         </div>
 
@@ -173,51 +181,11 @@ export default function index() {
             <br />
             innovation and creativity at Zetsy.
           </p>
-          <Marquee speed={35} pauseOnHover={true}>
-            <ul>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-            </ul>
-          </Marquee>
-          <Marquee speed={35} pauseOnHover={true} direction="right">
-            <ul>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-            </ul>
-          </Marquee>
-          <Marquee speed={35} pauseOnHover={true}>
-            <ul>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-              <li>Ditto</li>
-              <li>ThriftMyOutfit</li>
-            </ul>
-          </Marquee>
+          <MarqueeComponent speed={35} pauseOnHover={true} direction="left" />
+          <MarqueeComponent speed={35} pauseOnHover={true} direction="right" />
+          <MarqueeComponent speed={35} pauseOnHover={true} direction="left" />
 
-          <Button>Browse All Projects</Button>
+          <Link href={"all-products"}>Browse All Projects</Link>
         </div>
 
         <div className={styles.landing__zetsyForWho}>
@@ -286,7 +254,7 @@ export default function index() {
                   internationally, we provide you with all the necessary tools.
                 </span>
               </p>
-              <Button>Register Your Business</Button>
+              <Link href={"register-store"}>Register Your Business</Link>
             </div>
             <img loading="lazy" src={SpringR} alt="" />
           </div>
@@ -386,6 +354,6 @@ export default function index() {
           </div>
         </div>
       </div>
-    </HomeLayout>
+    </>
   );
 }

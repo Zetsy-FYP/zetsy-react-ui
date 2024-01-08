@@ -1,12 +1,13 @@
+"use client";
 import React from "react";
 
 import ThemeCard from "@/components/ThemeCard";
 import styles from "@/styles/themes.module.css";
-import HomeLayout from "@/layouts/HomeLayout";
 
 export default function Themes() {
   return (
-    <HomeLayout>
+    <>
+      
       <div className={styles.themes__container}>
         <div className={styles.searchThemes__container}>
           <input
@@ -20,6 +21,6 @@ export default function Themes() {
           })}
         </div>
       </div>
-    </HomeLayout>
+    </>
   );
 }

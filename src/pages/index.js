@@ -19,6 +19,73 @@ export async function getServerSideProps(context){
   };
 }
 
+const teams = [
+  {
+    id:1,
+    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1686759020/IMG_1896_gxzlmu.jpg",
+    title:"Ramesh Singh Saud",
+    post:"Project Supervisor",
+    icons:[
+      {
+        id:1,
+        icon:<i className="ri-facebook-fill"></i>
+      },
+      {
+        id:2,
+        icon:<i className="ri-github-fill"></i>
+      }
+    ]
+  },
+  {
+    id:2,
+    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1686759061/Suraj_dgqo2a.jpg",
+    title:"Suraj Gaire",
+    post:"Full Stack Developer ",
+    icons:[
+      {
+        id:1,
+        icon:<i className="ri-facebook-fill"></i>
+      },
+      {
+        id:2,
+        icon:<i className="ri-github-fill"></i>
+      }
+    ]
+  },
+  {
+    id:3,
+    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1695196149/sarbendra_jag1gp.jpg",
+    title:"Sarbendra Sigdel",
+    post:"Front-end Developer",
+    icons:[
+      {
+        id:1,
+        icon:<i className="ri-facebook-fill"></i>
+      },
+      {
+        id:2,
+        icon:<i className="ri-github-fill"></i>
+      }
+    ]
+  },
+  {
+    id:4,
+    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1686759020/IMG_1896_gxzlmu.jpg",
+    title:"Shishir Shrestha",
+    post:"UI/UX Designer",
+    icons:[
+      {
+        id:1,
+        icon:<i className="ri-facebook-fill"></i>
+      },
+      {
+        id:2,
+        icon:<i className="ri-github-fill"></i>
+      }
+    ]
+  },
+]
+
 export default function index() {
   return (
     <HomeLayout>
@@ -303,86 +370,26 @@ export default function index() {
           </p>
 
           <div className={styles.teamItems}>
-            <div className={styles.team}>
-              <img
-                loading="lazy"
-                src="https://ik.imagekit.io/jckalabs/Zetsy/Screenshot_from_2023-03-19_23-05-03.png?updatedAt=1679246413143"
-                alt=""
-              />
-              <span>Laxman Rai (Lex)</span>
-              <span className={styles.post}>Web3 Wizard</span>
-              <div className={styles.socialMedias}>
-                <div>
-                  <i className="ri-facebook-line"></i>
-                </div>
-                <div>
-                  <i className="ri-twitter-line"></i>
-                </div>
-                <div>
-                  <i className="ri-linkedin-line"></i>
-                </div>
-              </div>
-            </div>
-            <div className={styles.team}>
-              <img
-                loading="lazy"
-                src="https://ik.imagekit.io/jckalabs/Zetsy/327268592_853679075707120_7819938780839728950_n.jpg?updatedAt=1679246534521"
-                alt=""
-              />
-              <span>Sudeep Mishra (SoDeep)</span>
-              <span className={styles.post}>Platform Wizard</span>
-              <div className={styles.socialMedias}>
-                <div>
-                  <i className="ri-facebook-line"></i>
-                </div>
-                <div>
-                  <i className="ri-twitter-line"></i>
-                </div>
-                <div>
-                  <i className="ri-linkedin-line"></i>
-                </div>
-              </div>
-            </div>
-            <div className={styles.team}>
-              <img
-                loading="lazy"
-                src="https://ik.imagekit.io/jckalabs/Zetsy/57538363.jpeg?updatedAt=1679246673878"
-                alt=""
-              />
-              <span>Suraj Gaire (Gaire)</span>
-              <span className={styles.post}>Themes Wizard</span>
-              <div className={styles.socialMedias}>
-                <div>
-                  <i className="ri-facebook-line"></i>
-                </div>
-                <div>
-                  <i className="ri-twitter-line"></i>
-                </div>
-                <div>
-                  <i className="ri-linkedin-line"></i>
-                </div>
-              </div>
-            </div>
-            <div className={styles.team}>
-              <img
-                loading="lazy"
-                src="https://ik.imagekit.io/jckalabs/Zetsy/1517277165000.jpeg?updatedAt=1679246736576"
-                alt=""
-              />
-              <span>Nirdesh Acharya Dixit (Neil)</span>
-              <span className={styles.post}>Growth Hacker</span>
-              <div className={styles.socialMedias}>
-                <div>
-                  <i className="ri-facebook-line"></i>
-                </div>
-                <div>
-                  <i className="ri-twitter-line"></i>
-                </div>
-                <div>
-                  <i className="ri-linkedin-line"></i>
-                </div>
-              </div>
-            </div>
+            {
+              teams.map((team) => {
+                return (
+                  <div className={styles.team} key={team.id}>
+                    <img loading="lazy" src={team.image} alt={`team-${team.id}`} />
+                    <span> {team.title} </span>
+                    <span>{team.post}</span>
+                    <div className={styles.socialMedias}>
+                      {
+                        team.icons.map(icon => {
+                          return (
+                            <div className={icon.id}>{icon.icon}</div>
+                          )
+                        })
+                      }
+                    </div>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </div>

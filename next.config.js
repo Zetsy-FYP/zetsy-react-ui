@@ -2,7 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com', 'ik.imagekit.io'],
+   remotePatterns:[
+    {
+      protocol:"https",
+      hostname:"res.cloudinary.com",
+    }
+   ],
   },
 }
 

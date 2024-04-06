@@ -7,86 +7,95 @@ import SpringR from "@/assets/spring-r.png";
 
 import HomeLayout from "@/layouts/HomeLayout";
 import styles from "@/styles/index.module.css";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-export async function getServerSideProps(context){
+export async function getServerSideProps(context) {
   return {
     props: {
-      title:"Zetsy | The ultimate destination for online presence",
-      description: "Zetsy is a platform designed to bring together the best of ecommerce and business, with a focus on personalized experiences and unique products.",
-      canonical:`https://zetsy.store/`,
-      ogImage: "/zetsy_logo_bw.png"
+      title: "Zetsy | The ultimate destination for online presence",
+      description:
+        "Zetsy is a platform designed to bring together the best of ecommerce and business, with a focus on personalized experiences and unique products.",
+      canonical: `https://zetsy.store/`,
+      ogImage: "/zetsy_logo_bw.png",
     },
   };
 }
 
 const teams = [
   {
-    id:1,
-    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1686759020/IMG_1896_gxzlmu.jpg",
-    title:"Ramesh Singh Saud",
-    post:"Project Supervisor",
-    icons:[
+    id: 1,
+    image:
+      "https://res.cloudinary.com/codewithsudeep/image/upload/v1686759020/IMG_1896_gxzlmu.jpg",
+    title: "Ramesh Singh Saud",
+    post: "Project Supervisor",
+    icons: [
       {
-        id:1,
-        icon:<i className="ri-facebook-fill"></i>
+        id: 1,
+        icon: <i className="ri-facebook-fill"></i>,
       },
       {
-        id:2,
-        icon:<i className="ri-github-fill"></i>
-      }
-    ]
+        id: 2,
+        icon: <i className="ri-github-fill"></i>,
+      },
+    ],
   },
   {
-    id:2,
-    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1686759061/Suraj_dgqo2a.jpg",
-    title:"Suraj Gaire",
-    post:"Full Stack Developer ",
-    icons:[
+    id: 2,
+    image:
+      "https://res.cloudinary.com/codewithsudeep/image/upload/v1686759061/Suraj_dgqo2a.jpg",
+    title: "Suraj Gaire",
+    post: "Full Stack Developer ",
+    icons: [
       {
-        id:1,
-        icon:<i className="ri-facebook-fill"></i>
+        id: 1,
+        icon: <i className="ri-facebook-fill"></i>,
       },
       {
-        id:2,
-        icon:<i className="ri-github-fill"></i>
-      }
-    ]
+        id: 2,
+        icon: <i className="ri-github-fill"></i>,
+      },
+    ],
   },
   {
-    id:3,
-    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1695196149/sarbendra_jag1gp.jpg",
-    title:"Sarbendra Sigdel",
-    post:"Front-end Developer",
-    icons:[
+    id: 3,
+    image:
+      "https://res.cloudinary.com/codewithsudeep/image/upload/v1695196149/sarbendra_jag1gp.jpg",
+    title: "Sarbendra Sigdel",
+    post: "Front-end Developer",
+    icons: [
       {
-        id:1,
-        icon:<i className="ri-facebook-fill"></i>
+        id: 1,
+        icon: <i className="ri-facebook-fill"></i>,
       },
       {
-        id:2,
-        icon:<i className="ri-github-fill"></i>
-      }
-    ]
+        id: 2,
+        icon: <i className="ri-github-fill"></i>,
+      },
+    ],
   },
   {
-    id:4,
-    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1686759020/IMG_1896_gxzlmu.jpg",
-    title:"Shishir Shrestha",
-    post:"UI/UX Designer",
-    icons:[
+    id: 4,
+    image:
+      "https://res.cloudinary.com/codewithsudeep/image/upload/v1712379210/diukthcssipgv81qaj01.jpg",
+    title: "Shishir Shrestha",
+    post: "UI/UX Designer",
+    icons: [
       {
-        id:1,
-        icon:<i className="ri-facebook-fill"></i>
+        id: 1,
+        icon: <i className="ri-facebook-fill"></i>,
       },
       {
-        id:2,
-        icon:<i className="ri-github-fill"></i>
-      }
-    ]
+        id: 2,
+        icon: <i className="ri-github-fill"></i>,
+      },
+    ],
   },
-]
+];
 
 export default function index() {
+  const router = useRouter()
   return (
     <HomeLayout>
       <div className={styles.landing__container}>
@@ -132,7 +141,7 @@ export default function index() {
           </p>
 
           <div className={styles.joinZetsy}>
-            <p>let's zetsy started!</p> <i className="ri-arrow-right-line"></i>
+            <Link className=" cursor-pointer underline font-semibold text-[25px]" href={"https://business.zetsy.vercel.app/"} target="_blank">let's zetsy started!</Link> <i className="ri-arrow-right-line"></i>
           </div>
         </div>
 
@@ -353,7 +362,7 @@ export default function index() {
                   internationally, we provide you with all the necessary tools.
                 </span>
               </p>
-              <Button>Register Your Business</Button>
+              <Link className=" underline" href={"https://business.zetsy.vercel.app/"} target="_blank">Register Your Business</Link>
             </div>
             <img loading="lazy" src={SpringR} alt="" />
           </div>
@@ -369,27 +378,32 @@ export default function index() {
             excellence.
           </p>
 
-          <div className={styles.teamItems}>
-            {
-              teams.map((team) => {
-                return (
-                  <div className={styles.team} key={team.id}>
-                    <img loading="lazy" src={team.image} alt={`team-${team.id}`} />
-                    <span> {team.title} </span>
-                    <span>{team.post}</span>
-                    <div className={styles.socialMedias}>
-                      {
-                        team.icons.map(icon => {
-                          return (
-                            <div className={icon.id}>{icon.icon}</div>
-                          )
-                        })
-                      }
-                    </div>
-                  </div>
-                )
-              })
+          <div
+            className={
+              "grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-2"
             }
+          >
+            {teams.map((team) => {
+              return (
+                <div className={"flex flex-col gap-1"} key={team.id}>
+                  <div className="relative w-[300px] h-[350px]">
+                    <Image
+                      src={team.image}
+                      alt={`team-${team.id}`}
+                      fill
+                      className=" object-cover object-center"
+                    />
+                  </div>
+                  <p className=" !m-0"> {team.title} </p>
+                  <p className=" !m-0">{team.post}</p>
+                  <div className={"flex items-center justify-center gap-[10px]"}>
+                    {team.icons.map((icon) => {
+                      return <div key={icon.id}>{icon.icon}</div>;
+                    })}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

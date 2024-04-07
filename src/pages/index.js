@@ -70,7 +70,7 @@ const teams = [
   },
   {
     id:4,
-    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1686759020/IMG_1896_gxzlmu.jpg",
+    image:"https://res.cloudinary.com/codewithsudeep/image/upload/v1712379210/diukthcssipgv81qaj01.jpg",
     title:"Shishir Shrestha",
     post:"UI/UX Designer",
     icons:[
@@ -381,7 +381,7 @@ export default function index() {
                       {
                         team.icons.map(icon => {
                           return (
-                            <div className={icon.id}>{icon.icon}</div>
+                            <div className={icon.id} key={icon.id}>{icon.icon}</div>
                           )
                         })
                       }

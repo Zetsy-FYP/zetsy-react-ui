@@ -37,19 +37,19 @@ export default function Navbar() {
 
   const initialLogoStyle = {
     fontSize: !isMenuOpened
-      ? (windowWidth > 576
+      ? windowWidth > 576
         ? `${8 - (scrollY >= 148.88 ? 148.88 : scrollY) * 0.04}rem`
-        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`)
-      : (windowWidth > 576
+        : `${5 - (scrollY >= 148.88 ? 2.5 : scrollY * 0.0125)}rem`
+      : windowWidth > 576
       ? `${8 - 148.88 * 0.04}rem`
-      : `${5 - 2.5 * 0.0125}rem`),
+      : `${5 - 2.5 * 0.0125}rem`,
     top: isMenuOpened
-      ?( windowWidth > 576
+      ? windowWidth > 576
         ? "80px"
-        : "55px")
-      : (windowWidth > 576
+        : "55px"
+      : windowWidth > 576
       ? `${scrollY >= 140 ? 80 : 80 - (scrollY - 140)}px`
-      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`),
+      : `${scrollY >= 80 ? 55 : 23 - (scrollY - 120)}px`,
   };
 
   const handleMenu = () => {
@@ -103,24 +103,24 @@ export default function Navbar() {
             )}
           </Button>
 
-          <Button>
+          {/* <Button>
             <i className="ri-search-2-line"></i>
-          </Button>
+          </Button> */}
 
-          <input
+          {/* <input
             type="text"
             onChange={(e) => setInputValue(e.target.value)}
             onFocus={handleFocus}
             onBlur={handleBlur}
-          />
+          /> */}
 
-          <Button className={styles.borderRight}>
+          {/* <Button className={styles.borderRight}>
             <i className="ri-map-pin-line"></i>
-          </Button>
+          </Button> */}
 
-          <Button>
-            <i className="ri-shopping-cart-line"></i>
-          </Button>
+          {/* <Button> */}
+          {/* <i className="ri-shopping-cart-line"></i> */}
+          {/* </Button> */}
         </div>
         {!isFocused && scrollY !== 148.88 && inputValue === "" && (
           <div className={styles.menu__logo}>
